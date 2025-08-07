@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autoavaliação de Desempenho - Prefeitura Municipal de Pedro Leopoldo</title>
+
+    <!-- Biblioteca para gerar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/autoavaliacao.css" />
+  </head>
+  <body>
+    <div class="loading" id="loading">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <p>Gerando PDF...</p>
+      </div>
+    </div>
+
+    <div class="container" id="formulario-container">
+      <h1><img src="../assets/img/brasao.png" alt="" width="90px" />PREFEITURA MUNICIPAL DE PEDRO LEOPOLDO</h1>
+      <h2>AUTOAVALIAÇÃO DE DESEMPENHO (SERVIDOR)<br />EXERCÍCIO 2024</h2>
+
+      <div class="secao">
+        <h3>1. IDENTIFICAÇÃO DO SERVIDOR</h3>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Nome:</label>
+            <input type="text" id="nome" />
+          </div>
+          <div class="campo" style="flex: 0.3">
+            <label>Matrícula Nº:</label>
+            <input type="text" id="matricula" />
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Cargo:</label>
+            <input type="text" id="cargo" />
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Órgão:</label>
+            <input type="text" id="orgao" />
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Unidade:</label>
+            <input type="text" id="unidade" />
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Período Avaliativo:</label>
+            <input type="date" id="periodo_inicio" />
+            <span style="margin: 0 10px">a</span>
+            <input type="date" id="periodo_fim" />
+          </div>
+          <div class="campo" style="flex: 0.4">
+            <label>Data da Avaliação:</label>
+            <input type="date" id="data_avaliacao" />
+          </div>
+        </div>
+      </div>
+
+      <div class="secao">
+        <h3>2. INSTRUÇÕES</h3>
+        <div class="instrucoes">
+          <p>2.1 A Autoavaliação deverá ser preenchido pelo servidor.</p>
+          <p>2.2 Para cada comportamento deverá ser avaliado três critérios e atribuído uma pontuação, observada a escala de avaliação descrita abaixo.</p>
+          <p>2.3 A Autoavaliação preenchida deve ser datada e assinada pelo servidor e deverá receber a ciência da chefia atual.</p>
+        </div>
+      </div>
+
+      <div class="secao">
+        <h3>III. ESCALA DE AVALIAÇÃO</h3>
+        <div class="escala">
+          <p><strong>1 – Excelente (90% a 100%):</strong> supera as expectativas, com alto nível de qualidade.</p>
+          <p><strong>2 – Muito bom (80% a 89%):</strong> atende bem às expectativas, com poucos ajustes necessários.</p>
+          <p><strong>3 – Satisfatório (70% a 79%):</strong> cumpre os requisitos básicos, mas pode ser aprimorado.</p>
+          <p><strong>4 – Regular (60% a 69%):</strong> atende parcialmente, mas com falhas ou limitações.</p>
+          <p><strong>5 – Insatisfatório (abaixo de 60%):</strong> muito abaixo do esperado, não atende aos requisitos.</p>
+        </div>
+      </div>
+      <div class="secao">
+        <h3>4. AVALIAÇÃO DO SERVIDOR</h3>
+
+        <div id="comportamentos-container">
+          <!-- Os comportamentos serão inseridos aqui via JavaScript -->
+        </div>
+
+        <div class="resultado-final">
+          <h2>RESULTADO FINAL</h2>
+          <div>
+            <div class="resultado-linha">
+              <span>Total Geral (Máx: 100 pts):</span>
+              <span class="resultado-valor" id="total-geral">0.0</span>
+            </div>
+            <div class="resultado-linha">
+              <span>Percentual:</span>
+              <span class="resultado-valor" id="percentual">0.0%</span>
+            </div>
+            <div class="resultado-linha">
+              <span>Avaliação:</span>
+              <span class="resultado-valor" id="indice">–</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="assinaturas">
+        <p>
+          Local: <span class="assinatura-linha"></span> Data:
+          <input type="date" id="data_assinatura" style="width: 120px" />
+        </p>
+        <p>Assinatura do servidor: <span class="assinatura-linha"></span></p>
+        <p>Ciência da chefia atual: <span class="assinatura-linha"></span></p>
+      </div>
+
+      <div class="botoes-acao">
+        <button class="btn btn-primary" onclick="baixarPDF()">📄 BAIXAR PDF</button>
+        <button class="btn btn-secondary" onclick="novaAvaliacao()">🔄 NOVA AVALIAÇÃO</button>
+      </div>
+    </div>
+
+    <script src="./assets/js/autoavaliacao.js"></script>
+  </body>
+</html>
