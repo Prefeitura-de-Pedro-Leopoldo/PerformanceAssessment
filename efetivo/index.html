@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avaliação de Desempenho - Prefeitura Municipal de Pedro Leopoldo</title>
+
+    <!-- Biblioteca para gerar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="./src/assets/css/efetivo.css" />
+  </head>
+  <body>
+    <div class="loading" id="loading">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <p>Gerando PDF...</p>
+      </div>
+    </div>
+
+    <div class="container" id="formulario-container">
+      <h1><img src="./src/assets/img/brasao.png" alt="Uma descrição da imagem" width="70px" /> PREFEITURA MUNICIPAL DE PEDRO LEOPOLDO</h1>
+      <h2>ANEXO 1 - TERMO DE AVALIAÇÃO DE DESEMPENHO (SERVIDOR)</h2>
+
+      <div class="secao">
+        <h3>I. IDENTIFICAÇÃO DO SERVIDOR</h3>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Nome:</label>
+            <input type="text" id="nome" />
+          </div>
+          <div class="campo" style="flex: 0.3">
+            <label>Matrícula:</label>
+            <input type="text" id="matricula" />
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Cargo:</label>
+            <input type="text" id="cargo" />
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Órgão:</label>
+            <input type="text" id="orgao" />
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Unidade:</label>
+            <input type="text" id="unidade" />
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label>Período Avaliativo:</label>
+            <input type="date" id="periodo_inicio" />
+            <span style="margin: 0 10px">a</span>
+            <input type="date" id="periodo_fim" />
+          </div>
+          <div class="campo" style="flex: 0.4">
+            <label>Data da Avaliação:</label>
+            <input type="date" id="data_avaliacao" />
+          </div>
+        </div>
+      </div>
+
+      <div class="secao">
+        <h3>II. INSTRUÇÕES</h3>
+        <div class="instrucoes">
+          <p>2.1 O Termo de Avaliação deverá ser preenchido pela chefia imediata na presença do servidor.</p>
+          <p>2.2 Para cada comportamento deverá ser avaliado três critérios e atribuído uma pontuação (1-5).</p>
+          <p>2.3 O Termo de Avaliação preenchido deve ser datado e assinado pelo avaliador e pelo servidor.</p>
+        </div>
+      </div>
+
+      <div class="secao">
+        <h3>III. ESCALA DE AVALIAÇÃO</h3>
+        <div class="escala">
+          <p><strong>1 – Excelente (90% a 100%):</strong> supera as expectativas, com alto nível de qualidade.</p>
+          <p><strong>2 – Muito bom (80% a 89%):</strong> atende bem às expectativas, com poucos ajustes necessários.</p>
+          <p><strong>3 – Satisfatório (70% a 79%):</strong> cumpre os requisitos básicos, mas pode ser aprimorado.</p>
+          <p><strong>4 – Regular (60% a 69%):</strong> atende parcialmente, mas com falhas ou limitações.</p>
+          <p><strong>5 – Insatisfatório (abaixo de 60%):</strong> muito abaixo do esperado, não atende aos requisitos.</p>
+        </div>
+      </div>
+
+      <div class="secao">
+        <h3>IV. AVALIAÇÃO DO SERVIDOR</h3>
+
+        <div id="comportamentos-container">
+          <!-- Os comportamentos serão inseridos aqui via JavaScript -->
+        </div>
+
+        <div class="resultado-final">
+          <h2>RESULTADO FINAL</h2>
+          <div>
+            <div class="resultado-linha">
+              <span>Total Geral (Máx: 100 pts):</span>
+              <span class="resultado-valor" id="total-geral">0.0</span>
+            </div>
+            <div class="resultado-linha">
+              <span>Percentual:</span>
+              <span class="resultado-valor" id="percentual">0.0%</span>
+            </div>
+            <div class="resultado-linha">
+              <span>Avaliação:</span>
+              <span class="resultado-valor" id="indice">–</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secao">
+        <h3>RESULTADOS COMENTADOS</h3>
+        <div class="comentarios">
+          <p>Evidências - relatos de situações no período avaliado:</p>
+          <textarea id="comentarios" rows="4"></textarea>
+        </div>
+      </div>
+
+      <!-- Dificultadores da performance -->
+      <div class="secao">
+        <h3>Dificultadores da performance no período avaliado</h3>
+        <p style="margin-bottom: 10px; font-size: 10pt">
+          Assinale os dificultadores que precisam de atenção, conforme contexto em que o servidor está inserido.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 30px"></th>
+              <th>Fatores Individuais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>1. Problemas familiares, particulares ou de saúde: questões pessoais que podem afetar diretamente a concentração e a produtividade.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>2. Insuficiência de conhecimentos teóricos e/ou práticos: falta de preparo que compromete a execução eficiente das atividades.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>3. Falta de interesse, desmotivação: ausência de propósito ou reconhecimento que pode reduzir o engajamento.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>4. Ausências e impontualidade: alto índice de faltas e atrasos impactando a continuidade e a entrega de serviços.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table style="margin-top: 15px">
+          <thead>
+            <tr>
+              <th style="width: 30px"></th>
+              <th>Fatores Organizacionais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>1. Insuficiência de manuais, instruções e rotinas de trabalho: por falta de padronização ocorrem incertezas e retrabalho.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>2. Treinamentos e capacitação: ausência de capacitação contínua limitando o crescimento profissional.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>
+                3. Condições do ambiente e clima organizacional desfavoráveis: problemas na infraestrutura e cultura organizacional afetam a motivação e o
+                desempenho.
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>4. Clareza na comunicação interna: há barreiras na comunicação gerando falhas na execução e desalinhamento entre equipes.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table style="margin-top: 15px">
+          <thead>
+            <tr>
+              <th style="width: 30px"></th>
+              <th>Fatores Relacionais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>
+                1. Postura autoritária ou impositiva: não respeita hierarquia e opiniões contrárias e impõe suas ideias provocando um ambiente desagradável.
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>2. Resistência a trabalhar em equipe: preferência por trabalho isolado ou dificuldade de cooperação prejudicando a harmonia no ambiente.</td>
+            </tr>
+            <tr>
+              <td style="text-align: center"><input type="checkbox" /></td>
+              <td>3. Falta de empatia: dificuldade em compreender o ponto de vista do outro gerando atritos e falta de colaboração.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table style="margin-top: 15px">
+          <thead>
+            <tr>
+              <th style="width: 30px"></th>
+              <th>Outros fatores</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td><input type="text" style="width: 100%" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type="text" style="width: 100%" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type="text" style="width: 100%" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Plano de Desenvolvimento Individual -->
+      <div class="secao">
+        <h3>Plano de Desenvolvimento Individual</h3>
+        <p style="margin-bottom: 10px; font-size: 10pt">Ações e Estratégias para Desenvolvimento</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 30px">Nº</th>
+              <th>Ação de Desenvolvimento indicada</th>
+              <th style="width: 120px">Prazo para realização</th>
+              <th style="width: 150px">Recurso necessário</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center">1</td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: center">2</td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: center">3</td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: center">4</td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: center">5</td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" /></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 15px; margin-bottom: 5px; font-size: 10pt">Se desejar, insira outros comentários ou sugestões:</p>
+        <textarea style="width: 100%; min-height: 50px"></textarea>
+      </div>
+
+      <div class="assinaturas">
+        <div class="assinatura">
+          <div class="assinatura-linha"></div>
+          <p>Assinatura do Avaliador</p>
+          <p>Data: <input type="date" id="data_assinatura_avaliador" style="width: 120px" /></p>
+        </div>
+        <div class="assinatura">
+          <div class="assinatura-linha"></div>
+          <p>Assinatura do Servidor</p>
+          <p>Data: <input type="date" id="data_assinatura_servidor" style="width: 120px" /></p>
+        </div>
+      </div>
+
+      <div class="botoes-acao">
+        <button class="btn btn-primary" onclick="baixarPDF()">📄 BAIXAR PDF</button>
+        <button class="btn btn-secondary" onclick="novaAvaliacao()">🔄 NOVA AVALIAÇÃO</button>
+      </div>
+    </div>
+    <script src="./src/assets/js/efetivo.js"></script>
+  </body>
+</html>
