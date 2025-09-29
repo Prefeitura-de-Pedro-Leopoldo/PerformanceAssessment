@@ -1,0 +1,16 @@
+.secao {
+  margin-bottom: var(--espacamento-grande);
+  page-break-inside: avoid;
+}
+
+.secao:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ========== IMPRESSÃO ========== */
+
+@media print {
+  .secao {
+    page-break-inside: avoid !important;
+  }
+}

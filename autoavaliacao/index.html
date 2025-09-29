@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autoavaliação de Desempenho - Prefeitura Municipal de Pedro Leopoldo</title>
+
+    <!-- Biblioteca para gerar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- Estilos - Vite vai processar automaticamente -->
+    <link rel="stylesheet" href="./src/assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Loading overlay -->
+    <div class="loading" id="loading" aria-hidden="true">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <p>Gerando PDF...</p>
+      </div>
+    </div>
+
+    <!-- Container principal do formulário -->
+    <div class="container" id="formulario-container">
+      <!-- Cabeçalho -->
+      <header>
+        <h1>
+          <img src="./src/assets/img/brasao.png" alt="Brasão da Prefeitura" width="90" />
+          PREFEITURA MUNICIPAL DE PEDRO LEOPOLDO
+        </h1>
+        <h2>
+          AUTOAVALIAÇÃO DE DESEMPENHO (SERVIDOR)<br />
+          EXERCÍCIO 2024
+        </h2>
+      </header>
+
+      <!-- Seção 1: Identificação -->
+      <section class="secao">
+        <h3>1. IDENTIFICAÇÃO DO SERVIDOR</h3>
+
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" />
+          </div>
+          <div class="campo campo-pequeno">
+            <label for="matricula">Matrícula Nº:</label>
+            <input type="text" id="matricula" name="matricula" />
+          </div>
+        </div>
+
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" name="cargo" />
+          </div>
+        </div>
+
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="orgao">Órgão:</label>
+            <input type="text" id="orgao" name="orgao" />
+          </div>
+        </div>
+
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="unidade">Unidade:</label>
+            <input type="text" id="unidade" name="unidade" />
+          </div>
+        </div>
+
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="periodo_inicio">Período Avaliativo:</label>
+            <input type="date" id="periodo_inicio" name="periodo_inicio" />
+            <span class="separador">a</span>
+            <input type="date" id="periodo_fim" name="periodo_fim" />
+          </div>
+          <div class="campo campo-medio">
+            <label for="data_avaliacao">Data da Avaliação:</label>
+            <input type="date" id="data_avaliacao" name="data_avaliacao" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 2: Instruções -->
+      <section class="secao">
+        <h3>2. INSTRUÇÕES</h3>
+        <div class="instrucoes">
+          <p>2.1 A Autoavaliação deverá ser preenchida pelo servidor.</p>
+          <p>2.2 Para cada comportamento deverá ser avaliado três critérios e atribuído uma pontuação, observada a escala de avaliação descrita abaixo.</p>
+          <p>2.3 A Autoavaliação preenchida deve ser datada e assinada pelo servidor e deverá receber a ciência da chefia atual.</p>
+        </div>
+      </section>
+
+      <!-- Seção 3: Escala de Avaliação -->
+      <section class="secao">
+        <h3>3. ESCALA DE AVALIAÇÃO</h3>
+        <div class="escala">
+          <p><strong>1 - Excelente (90% a 100%):</strong> supera as expectativas, com alto nível de qualidade.</p>
+          <p><strong>2 - Muito bom (80% a 89%):</strong> atende bem às expectativas, com poucos ajustes necessários.</p>
+          <p><strong>3 - Satisfatório (70% a 79%):</strong> cumpre os requisitos básicos, mas pode ser aprimorado.</p>
+          <p><strong>4 - Regular (60% a 69%):</strong> atende parcialmente, mas com falhas ou limitações.</p>
+          <p><strong>5 - Insatisfatório (abaixo de 60%):</strong> muito abaixo do esperado, não atende aos requisitos.</p>
+        </div>
+      </section>
+
+      <!-- Seção 4: Avaliação -->
+      <section class="secao">
+        <h3>4. AVALIAÇÃO DO SERVIDOR</h3>
+
+        <!-- Container onde os comportamentos serão inseridos via JavaScript -->
+        <div id="comportamentos-container"></div>
+
+        <!-- Resultado Final -->
+        <div class="resultado-final">
+          <h2>RESULTADO FINAL</h2>
+          <div class="resultado-conteudo">
+            <div class="resultado-linha">
+              <span>Total Geral (Máx: 100 pts):</span>
+              <span class="resultado-valor" id="total-geral">0.0</span>
+            </div>
+            <div class="resultado-linha">
+              <span>Percentual:</span>
+              <span class="resultado-valor" id="percentual">0.0%</span>
+            </div>
+            <div class="resultado-linha">
+              <span>Avaliação:</span>
+              <span class="resultado-valor" id="indice">-</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Assinaturas -->
+      <section class="assinaturas">
+        <p>
+          Local: <input type="text" id="local" name="local" class="input-local" /> Data:
+          <input type="date" id="data_assinatura" name="data_assinatura" class="input-data-assinatura" />
+        </p>
+        <br>
+        <p>Assinatura do servidor: </span></p>
+        <br>
+        <p>Ciência da chefia atual: </span></p>
+      </section>
+
+      <!-- Botões de Ação -->
+      <div class="botoes-acao">
+        <button type="button" class="btn btn-primary" onclick="baixarPDF()" aria-label="Baixar PDF">📄 BAIXAR PDF</button>
+        <button type="button" class="btn btn-secondary" onclick="novaAvaliacao()" aria-label="Nova Avaliação">🔄 NOVA AVALIAÇÃO</button>
+      </div>
+    </div>
+
+    <!-- JavaScript Modular - Vite vai processar automaticamente -->
+    <script type="module" src="./src/assets/js/main.js"></script>
+  </body>
+</html>

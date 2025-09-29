@@ -1,0 +1,30 @@
+.container {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  background: var(--cor-branco);
+  padding: var(--padding-container);
+  box-shadow: var(--sombra-padrao);
+  min-height: var(--altura-minima-vh);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: var(--espacamento-normal);
+  }
+}
+
+/* ========== IMPRESSÃO ========== */
+
+@media print {
+  body {
+    background: var(--cor-branco);
+  }
+
+  .container {
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+}

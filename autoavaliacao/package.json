@@ -1,0 +1,17 @@
+{
+  "name": "autoavaliacao-desempenho",
+  "version": "1.0.0",
+  "description": "Sistema de Autoavaliação de Desempenho - Prefeitura Municipal de Pedro Leopoldo",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist node_modules"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-html": "^3.2.0"
+  },
+  "dependencies": {}
+}

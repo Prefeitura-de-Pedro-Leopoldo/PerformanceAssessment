@@ -1,0 +1,15 @@
+body {
+  font-family: var(--fonte-principal);
+  font-size: var(--fonte-media);
+  line-height: var(--linha-altura-padrao);
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+/* Definições globais de fonte para elementos específicos */
+input,
+textarea,
+select,
+button {
+  font-family: var(--fonte-principal);
+}

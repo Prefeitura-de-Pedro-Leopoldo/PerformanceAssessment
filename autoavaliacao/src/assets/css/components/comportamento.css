@@ -1,0 +1,87 @@
+/* ========== CONTAINER DO COMPORTAMENTO ========== */
+
+.comportamento {
+  border: var(--borda-fina) solid var(--cor-borda);
+  margin-bottom: var(--espacamento-grande);
+  page-break-inside: avoid;
+  background: var(--cor-branco);
+}
+
+/* ========== HEADER DO COMPORTAMENTO ========== */
+
+.comportamento-header {
+  background: var(--cor-destaque);
+  padding: var(--espacamento-normal);
+  border-bottom: var(--borda-fina) solid var(--cor-borda-escura);
+}
+
+.comportamento-header h4 {
+  font-size: var(--fonte-media);
+  margin-bottom: 3px;
+  color: var(--cor-primaria);
+}
+
+.comportamento-header p {
+  font-size: var(--fonte-pequena);
+  color: var(--cor-texto-secundario);
+  font-style: italic;
+  line-height: var(--linha-altura-padrao);
+}
+
+/* ========== CRITÉRIOS ========== */
+
+.criterio {
+  display: flex;
+  align-items: center;
+  padding: 8px var(--espacamento-normal);
+  border-bottom: var(--borda-fina) solid var(--cor-borda-clara);
+  background: var(--cor-branco);
+  transition: background-color var(--transicao-rapida);
+}
+
+.criterio:hover {
+  background: var(--cor-fundo);
+}
+
+.criterio:last-child {
+  border-bottom: none;
+}
+
+.criterio-numero {
+  font-weight: var(--peso-negrito);
+  margin-right: var(--espacamento-normal);
+  min-width: 35px;
+  font-size: var(--fonte-normal);
+  color: var(--cor-secundaria);
+}
+
+.criterio-texto {
+  flex: 1;
+  padding-right: var(--espacamento-normal);
+  font-size: var(--fonte-normal);
+  line-height: var(--linha-altura-padrao);
+}
+
+/* ========== TOTAL DO COMPORTAMENTO ========== */
+
+.total-comportamento {
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
+  padding: 8px var(--espacamento-normal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fonte-normal);
+  font-weight: var(--peso-negrito);
+}
+
+.total-valor {
+  background: var(--cor-branco);
+  color: var(--cor-primaria);
+  padding: var(--espacamento-minimo) var(--espacamento-normal);
+  border-radius: var(--raio-pequeno);
+  font-weight: var(--peso-negrito);
+  min-width: 50px;
+  text-align: center;
+  font-size: var(--fonte-media);
+}
