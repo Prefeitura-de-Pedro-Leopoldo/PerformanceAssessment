@@ -1,0 +1,176 @@
+/* ========== ESTRUTURA DE CAMPOS ========== */
+
+.campo-grupo {
+  display: flex;
+  gap: var(--gap-medio);
+  margin-bottom: var(--espacamento-normal);
+  align-items: center;
+}
+
+.campo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-pequeno);
+}
+
+.campo-pequeno {
+  flex: 0.3;
+}
+
+.campo-medio {
+  flex: 0.4;
+}
+
+/* ========== LABELS ========== */
+
+label {
+  font-weight: var(--peso-negrito);
+  font-size: var(--fonte-normal);
+  white-space: nowrap;
+}
+
+/* ========== INPUTS BASE ========== */
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+  border: none;
+  border-bottom: var(--borda-fina) solid var(--cor-primaria);
+  padding: var(--espacamento-minimo) var(--espacamento-pequeno);
+  font-family: var(--fonte-principal);
+  font-size: var(--fonte-normal);
+  background: transparent;
+  transition: border-color var(--transicao-rapida);
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-bottom-color: var(--cor-secundaria);
+}
+
+/* ========== INPUTS ESPECÍFICOS ========== */
+
+input[type="text"],
+input[type="date"] {
+  flex: 1;
+}
+
+input[type="number"] {
+  width: var(--largura-input-numero);
+  text-align: center;
+  border: var(--borda-fina) solid var(--cor-terciaria);
+  border-radius: var(--raio-pequeno);
+}
+
+input[type="checkbox"] {
+  margin-right: var(--espacamento-pequeno);
+  transform: scale(1.2);
+}
+
+.input-data-assinatura {
+  width: var(--largura-input-data);
+}
+
+textarea {
+  width: 100%;
+  border: var(--borda-fina) solid var(--cor-terciaria);
+  min-height: var(--altura-minima-textarea);
+  padding: 8px;
+  resize: vertical;
+  border-radius: var(--raio-pequeno);
+}
+
+/* ========== INSTRUÇÕES ========== */
+
+.instrucoes {
+  background: var(--cor-fundo);
+  padding: var(--espacamento-normal);
+  margin: var(--espacamento-normal) 0;
+  border-left: var(--borda-grossa) solid var(--cor-secundaria);
+}
+
+.instrucoes p {
+  margin-bottom: var(--espacamento-pequeno);
+  font-size: var(--fonte-normal);
+}
+
+/* ========== ESCALA DE AVALIAÇÃO ========== */
+
+.escala {
+  background: var(--cor-fundo-secundario);
+  padding: var(--espacamento-normal);
+  margin: var(--espacamento-normal) 0;
+  border-radius: var(--raio-pequeno);
+}
+
+.escala p {
+  margin-bottom: var(--espacamento-pequeno);
+  font-size: var(--fonte-normal);
+  padding-left: var(--espacamento-medio);
+}
+
+/* ========== COMENTÁRIOS ========== */
+
+.comentarios {
+  margin: var(--espacamento-normal) 0;
+}
+
+.comentarios p {
+  margin-bottom: var(--espacamento-pequeno);
+  font-size: var(--fonte-normal);
+}
+
+/* ========== ASSINATURAS ========== */
+
+.assinaturas {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--espacamento-enorme);
+  page-break-inside: avoid;
+}
+
+.assinatura {
+  width: 45%;
+  text-align: center;
+}
+
+.assinatura-linha {
+  border-bottom: var(--borda-fina) solid var(--cor-primaria);
+  height: 40px;
+  margin-bottom: var(--espacamento-pequeno);
+}
+
+.assinatura p {
+  font-size: var(--fonte-normal);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media screen and (max-width: 768px) {
+  .campo-grupo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .campo-pequeno,
+  .campo-medio {
+    flex: 1;
+  }
+
+  .assinaturas {
+    flex-direction: column;
+    gap: var(--espacamento-grande);
+  }
+
+  .assinatura {
+    width: 100%;
+  }
+
+  .assinatura-linha {
+    width: 100%;
+  }
+}
