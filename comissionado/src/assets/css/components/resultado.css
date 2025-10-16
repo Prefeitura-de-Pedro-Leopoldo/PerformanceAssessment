@@ -28,9 +28,11 @@
 .resultado-linha {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--gap-normal);
   margin: var(--espacamento-pequeno) 0;
   font-size: var(--fonte-grande);
+  width: 100%;
 }
 
 .resultado-linha span:first-child {
