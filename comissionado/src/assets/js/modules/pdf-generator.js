@@ -127,13 +127,14 @@ export function prepararCloneParaPDF(elemento) {
 export function criarContainerTemporario(conteudo) {
   const container = document.createElement("div")
   container.style.position = "fixed"
-  container.style.top = "0"
-  container.style.left = "0"
+  container.style.top = "-9999px"
+  container.style.left = "-9999px"
   container.style.width = "210mm"
   container.style.height = "297mm"
-  container.style.overflow = "auto"
+  container.style.overflow = "hidden"
   container.style.background = "white"
-  container.style.zIndex = "10000"
+  container.style.opacity = "0"
+  container.style.pointerEvents = "none"
   container.appendChild(conteudo)
 
   return container
