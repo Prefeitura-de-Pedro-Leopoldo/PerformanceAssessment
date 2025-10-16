@@ -1,0 +1,67 @@
+/* ========== CONTAINER DO RESULTADO ========== */
+
+.resultado-final {
+  background: #f0f0f0;
+  border: var(--borda-media) solid var(--cor-primaria);
+  padding: var(--espacamento-medio);
+  margin: var(--espacamento-grande) 0;
+  text-align: center;
+  page-break-inside: avoid;
+  border-radius: var(--raio-pequeno);
+}
+
+.resultado-final h2 {
+  font-size: var(--fonte-titulo);
+  margin-bottom: var(--espacamento-normal);
+  color: var(--cor-primaria);
+}
+
+/* ========== CONTEÚDO DO RESULTADO ========== */
+
+.resultado-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-pequeno);
+}
+
+.resultado-linha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-normal);
+  margin: var(--espacamento-pequeno) 0;
+  font-size: var(--fonte-grande);
+  width: 100%;
+}
+
+.resultado-linha span:first-child {
+  font-weight: var(--peso-negrito);
+}
+
+.resultado-valor {
+  background: var(--cor-branco);
+  border: var(--borda-fina) solid var(--cor-primaria);
+  padding: var(--espacamento-minimo) var(--espacamento-normal);
+  font-weight: var(--peso-negrito);
+  display: inline-block;
+  min-width: var(--largura-resultado-valor);
+  text-align: center;
+  border-radius: var(--raio-pequeno);
+  color: var(--cor-primaria);
+  font-size: var(--fonte-media);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media screen and (max-width: 768px) {
+  .resultado-linha {
+    flex-direction: column;
+    gap: var(--gap-pequeno);
+  }
+
+  .resultado-valor {
+    width: 100%;
+    max-width: 200px;
+  }
+}

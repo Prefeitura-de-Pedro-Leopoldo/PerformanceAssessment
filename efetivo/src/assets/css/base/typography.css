@@ -1,0 +1,97 @@
+/* ========== TÍTULOS ========== */
+
+h1 {
+  font-size: var(--fonte-titulo);
+  font-weight: var(--peso-negrito);
+  line-height: var(--linha-altura-titulo);
+  text-align: center;
+  margin-bottom: 5mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-normal);
+}
+
+h2 {
+  font-size: var(--fonte-grande);
+  font-weight: var(--peso-normal);
+  line-height: var(--linha-altura-titulo);
+  text-align: center;
+  margin-bottom: var(--margem-pagina);
+}
+
+h3 {
+  font-size: var(--fonte-media);
+  font-weight: var(--peso-negrito);
+  line-height: var(--linha-altura-titulo);
+  background: var(--cor-destaque);
+  padding: var(--espacamento-pequeno) var(--espacamento-normal);
+  margin: var(--espacamento-medio) 0 var(--espacamento-normal) 0;
+  border-left: var(--borda-grossa) solid var(--cor-primaria);
+}
+
+h4 {
+  font-size: var(--fonte-media);
+  font-weight: var(--peso-negrito);
+  margin-bottom: 3px;
+}
+
+/* ========== PARÁGRAFOS ========== */
+
+p {
+  font-size: var(--fonte-normal);
+  line-height: var(--linha-altura-padrao);
+  margin-bottom: var(--espacamento-pequeno);
+}
+
+/* ========== UTILITÁRIOS DE TEXTO ========== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: var(--peso-negrito);
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-small {
+  font-size: var(--fonte-pequena);
+}
+
+.text-normal {
+  font-size: var(--fonte-normal);
+}
+
+.text-large {
+  font-size: var(--fonte-grande);
+}
+
+.text-secondary {
+  color: var(--cor-texto-secundario);
+}
+
+/* ========== ESTILOS ESPECÍFICOS ========== */
+
+.separador {
+  margin: 0 var(--espacamento-normal);
+}
+
+strong {
+  font-weight: var(--peso-negrito);
+}
+
+em {
+  font-style: italic;
+}

@@ -1,0 +1,64 @@
+/* ========== TABELAS ========== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--espacamento-normal) 0;
+  font-size: var(--fonte-normal);
+  page-break-inside: avoid;
+}
+
+table th {
+  background: #f0f0f0;
+  padding: 8px;
+  text-align: left;
+  font-weight: var(--peso-negrito);
+  border-bottom: var(--borda-media) solid var(--cor-terciaria);
+  font-size: var(--fonte-normal);
+}
+
+table td {
+  padding: 6px 8px;
+  border-bottom: var(--borda-fina) solid var(--cor-borda);
+  vertical-align: top;
+}
+
+table input[type="text"] {
+  width: 100%;
+  border-bottom: var(--borda-fina) solid var(--cor-terciaria);
+}
+
+table input[type="checkbox"] {
+  margin: 0;
+}
+
+/* ========== ESTILOS ESPECÍFICOS DE TABELA ========== */
+
+table td[style*="text-align: center"] {
+  text-align: center;
+}
+
+table td[style*="width: 30px"] {
+  width: 30px;
+  text-align: center;
+}
+
+table th[style*="width: 30px"] {
+  width: 30px;
+}
+
+table th[style*="width: 120px"] {
+  width: 120px;
+}
+
+table th[style*="width: 150px"] {
+  width: 150px;
+}
+
+/* ========== IMPRESSÃO ========== */
+
+@media print {
+  table {
+    page-break-inside: avoid !important;
+  }
+}

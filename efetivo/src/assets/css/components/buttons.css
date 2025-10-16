@@ -1,0 +1,80 @@
+/* ========== CONTAINER DE BOTÕES ========== */
+
+.botoes-acao {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-grande);
+  margin: var(--espacamento-enorme) 0 var(--espacamento-grande);
+}
+
+/* ========== ESTILOS BASE DE BOTÃO ========== */
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: var(--raio-normal);
+  font-size: 14px;
+  font-weight: var(--peso-negrito);
+  cursor: pointer;
+  transition: all var(--transicao-normal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-pequeno);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-hover);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========== VARIANTES DE BOTÃO ========== */
+
+.btn-primary {
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--cor-texto-secundario);
+}
+
+.btn-secondary {
+  background: var(--cor-secundaria);
+  color: var(--cor-branco);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--cor-hover);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media screen and (max-width: 768px) {
+  .botoes-acao {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* ========== IMPRESSÃO ========== */
+
+@media print {
+  .botoes-acao {
+    display: none !important;
+  }
+}

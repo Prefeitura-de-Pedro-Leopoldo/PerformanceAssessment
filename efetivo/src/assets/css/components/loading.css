@@ -1,0 +1,63 @@
+/* ========== OVERLAY DE LOADING ========== */
+
+.loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--cor-overlay);
+  z-index: var(--z-overlay);
+  justify-content: center;
+  align-items: center;
+}
+
+.loading.show {
+  display: flex;
+}
+
+/* ========== CONTEÚDO DO LOADING ========== */
+
+.loading-content {
+  background: var(--cor-branco);
+  padding: var(--espacamento-extra-grande) 50px;
+  border-radius: var(--raio-medio);
+  text-align: center;
+  box-shadow: var(--sombra-padrao);
+}
+
+.loading-content p {
+  font-size: var(--fonte-normal);
+  color: var(--cor-primaria);
+  margin: 0;
+}
+
+/* ========== SPINNER ANIMADO ========== */
+
+.spinner {
+  border: var(--borda-extra-grossa) solid #f3f3f3;
+  border-top: var(--borda-extra-grossa) solid var(--cor-primaria);
+  border-radius: var(--raio-circular);
+  width: var(--altura-spinner);
+  height: var(--altura-spinner);
+  animation: spin 1s linear infinite;
+  margin: 0 auto var(--espacamento-grande);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========== IMPRESSÃO ========== */
+
+@media print {
+  .loading {
+    display: none !important;
+  }
+}
