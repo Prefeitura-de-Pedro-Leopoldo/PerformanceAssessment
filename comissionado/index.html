@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div class="container" id="formulario-container">
+    <main class="container" id="formulario-container">
       <h1><img src="./src/assets/img/brasao.png" alt="Uma descrição da imagem" width="70px" /> PREFEITURA MUNICIPAL DE PEDRO LEOPOLDO</h1>
       <h2>ANEXO 2 TERMO DE AVALIAÇÃO DE DESEMPENHO (SERVIDOR EM EXERCÍCO DE CARGO EM COMISSÃO)</h2>
 
@@ -111,16 +111,16 @@
         </div>
       </div>
 
-      <div class="secao">
+      <section class="secao">
         <h3>RESULTADOS COMENTADOS</h3>
         <div class="comentarios">
-          <p>Evidências - relatos de situações no período avaliado:</p>
-          <textarea id="comentarios" rows="4"></textarea>
+          <label for="comentarios">Evidências - relatos de situações no período avaliado:</label>
+          <textarea id="comentarios" name="comentarios" rows="4" aria-label="Campo para comentários sobre evidências"></textarea>
         </div>
-      </div>
+      </section>
 
       <!-- Dificultadores da performance -->
-      <div class="secao">
+      <section class="secao">
         <h3>Dificultadores da performance no período avaliado</h3>
         <p style="margin-bottom: 10px; font-size: 10pt">
           Assinale os dificultadores que precisam de atenção, conforme contexto em que o servidor está inserido.
@@ -129,25 +129,25 @@
         <table>
           <thead>
             <tr>
-              <th style="width: 30px"></th>
-              <th>Fatores Individuais</th>
+              <th scope="col" style="width: 30px"></th>
+              <th scope="col">Fatores Individuais</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Problemas familiares, particulares ou de saúde" /></td>
               <td>1. Problemas familiares, particulares ou de saúde: questões pessoais que podem afetar diretamente a concentração e a produtividade.</td>
             </tr>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Insuficiência de conhecimentos teóricos e/ou práticos" /></td>
               <td>2. Insuficiência de conhecimentos teóricos e/ou práticos: falta de preparo que compromete a execução eficiente das atividades.</td>
             </tr>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Falta de interesse, desmotivação" /></td>
               <td>3. Falta de interesse, desmotivação: ausência de propósito ou reconhecimento que pode reduzir o engajamento.</td>
             </tr>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Ausências e impontualidade" /></td>
               <td>4. Ausências e impontualidade: alto índice de faltas e atrasos impactando a continuidade e a entrega de serviços.</td>
             </tr>
           </tbody>
@@ -156,28 +156,28 @@
         <table style="margin-top: 15px">
           <thead>
             <tr>
-              <th style="width: 30px"></th>
-              <th>Fatores Organizacionais</th>
+              <th scope="col" style="width: 30px"></th>
+              <th scope="col">Fatores Organizacionais</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Insuficiência de manuais, instruções e rotinas de trabalho" /></td>
               <td>1. Insuficiência de manuais, instruções e rotinas de trabalho: por falta de padronização ocorrem incertezas e retrabalho.</td>
             </tr>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Treinamentos e capacitação" /></td>
               <td>2. Treinamentos e capacitação: ausência de capacitação contínua limitando o crescimento profissional.</td>
             </tr>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Condições do ambiente e clima organizacional desfavoráveis" /></td>
               <td>
                 3. Condições do ambiente e clima organizacional desfavoráveis: problemas na infraestrutura e cultura organizacional afetam a motivação e o
                 desempenho.
               </td>
             </tr>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Clareza na comunicação interna" /></td>
               <td>4. Clareza na comunicação interna: há barreiras na comunicação gerando falhas na execução e desalinhamento entre equipes.</td>
             </tr>
           </tbody>
@@ -186,23 +186,23 @@
         <table style="margin-top: 15px">
           <thead>
             <tr>
-              <th style="width: 30px"></th>
-              <th>Fatores Relacionais</th>
+              <th scope="col" style="width: 30px"></th>
+              <th scope="col">Fatores Relacionais</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Postura autoritária ou impositiva" /></td>
               <td>
                 1. Postura autoritária ou impositiva: não respeita hierarquia e opiniões contrárias e impõe suas ideias provocando um ambiente desagradável.
               </td>
             </tr>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Resistência a trabalhar em equipe" /></td>
               <td>2. Resistência a trabalhar em equipe: preferência por trabalho isolado ou dificuldade de cooperação prejudicando a harmonia no ambiente.</td>
             </tr>
             <tr>
-              <td style="text-align: center"><input type="checkbox" /></td>
+              <td style="text-align: center"><input type="checkbox" aria-label="Falta de empatia" /></td>
               <td>3. Falta de empatia: dificuldade em compreender o ponto de vista do outro gerando atritos e falta de colaboração.</td>
             </tr>
           </tbody>
@@ -211,97 +211,111 @@
         <table style="margin-top: 15px">
           <thead>
             <tr>
-              <th style="width: 30px"></th>
-              <th>Outros fatores</th>
+              <th scope="col" style="width: 30px"></th>
+              <th scope="col">Outros fatores</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td></td>
-              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Outro fator 1" /></td>
             </tr>
             <tr>
               <td></td>
-              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Outro fator 2" /></td>
             </tr>
             <tr>
               <td></td>
-              <td><input type="text" style="width: 100%" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Outro fator 3" /></td>
             </tr>
           </tbody>
         </table>
-      </div>
+      </section>
 
       <!-- Plano de Desenvolvimento Individual -->
-      <div class="secao">
+      <section class="secao">
         <h3>Plano de Desenvolvimento Individual</h3>
         <p style="margin-bottom: 10px; font-size: 10pt">Ações e Estratégias para Desenvolvimento</p>
 
         <table>
           <thead>
             <tr>
-              <th style="width: 30px">Nº</th>
-              <th>Ação de Desenvolvimento indicada</th>
-              <th style="width: 120px">Prazo para realização</th>
-              <th style="width: 150px">Recurso necessário</th>
+              <th scope="col" style="width: 30px">Nº</th>
+              <th scope="col">Ação de Desenvolvimento indicada</th>
+              <th scope="col" style="width: 120px">Prazo para realização</th>
+              <th scope="col" style="width: 150px">Recurso necessário</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="text-align: center">1</td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
+              <th scope="row" style="text-align: center">1</th>
+              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 1" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Prazo para ação 1" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 1" /></td>
             </tr>
             <tr>
-              <td style="text-align: center">2</td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
+              <th scope="row" style="text-align: center">2</th>
+              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 2" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Prazo para ação 2" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 2" /></td>
             </tr>
             <tr>
-              <td style="text-align: center">3</td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
+              <th scope="row" style="text-align: center">3</th>
+              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 3" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Prazo para ação 3" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 3" /></td>
             </tr>
             <tr>
-              <td style="text-align: center">4</td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
+              <th scope="row" style="text-align: center">4</th>
+              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 4" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Prazo para ação 4" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 4" /></td>
             </tr>
             <tr>
-              <td style="text-align: center">5</td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
-              <td><input type="text" style="width: 100%" /></td>
+              <th scope="row" style="text-align: center">5</th>
+              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 5" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Prazo para ação 5" /></td>
+              <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 5" /></td>
             </tr>
           </tbody>
         </table>
 
-        <p style="margin-top: 15px; margin-bottom: 5px; font-size: 10pt">Se desejar, insira outros comentários ou sugestões:</p>
-        <textarea style="width: 100%; min-height: 50px"></textarea>
-      </div>
+        <label for="comentarios-adicionais" style="margin-top: 15px; margin-bottom: 5px; font-size: 10pt; display: block"
+          >Se desejar, insira outros comentários ou sugestões:</label
+        >
+        <textarea id="comentarios-adicionais" style="width: 100%; min-height: 50px" aria-label="Comentários ou sugestões adicionais"></textarea>
+      </section>
 
-      <div class="assinaturas">
+      <section class="assinaturas">
         <div class="assinatura">
-          <div class="assinatura-linha"></div>
+          <div class="assinatura-linha" role="presentation"></div>
           <p>Assinatura do Avaliador</p>
-          <p>Data: <input type="date" id="data_assinatura_avaliador" style="width: 120px" /></p>
+          <p>
+            Data:
+            <input
+              type="date"
+              id="data_assinatura_avaliador"
+              name="data_assinatura_avaliador"
+              style="width: 120px"
+              aria-label="Data da assinatura do avaliador"
+            />
+          </p>
         </div>
         <div class="assinatura">
-          <div class="assinatura-linha"></div>
+          <div class="assinatura-linha" role="presentation"></div>
           <p>Assinatura do Servidor</p>
-          <p>Data: <input type="date" id="data_assinatura_servidor" style="width: 120px" /></p>
+          <p>
+            Data:
+            <input type="date" id="data_assinatura_servidor" name="data_assinatura_servidor" style="width: 120px" aria-label="Data da assinatura do servidor" />
+          </p>
         </div>
-      </div>
+      </section>
 
-      <div class="botoes-acao">
+      <nav class="botoes-acao">
         <button class="btn btn-primary" onclick="baixarPDF()">📄 BAIXAR PDF</button>
         <button class="btn btn-secondary" onclick="novaAvaliacao()">🔄 NOVA AVALIAÇÃO</button>
-      </div>
-    </div>
+      </nav>
+    </main>
     <script type="module" src="./src/assets/js/main.js"></script>
   </body>
 </html>
