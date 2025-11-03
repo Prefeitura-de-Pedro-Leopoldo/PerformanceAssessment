@@ -1,0 +1,45 @@
+# Dependências do Composer
+/vendor/
+composer.phar
+composer.lock
+
+# Arquivos de configuração com senhas
+.env
+config.php
+
+# Logs
+*.log
+/logs/
+
+# Arquivos temporários
+*.tmp
+*.temp
+/tmp/
+
+# Uploads (se houver pasta de uploads)
+/uploads/*
+!/uploads/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node modules (se usar)
+node_modules/
+
+# Arquivos de build
+/dist/
+/build/
+
+# Arquivos sensíveis
+*credentials*
+*password*
+*secret*
