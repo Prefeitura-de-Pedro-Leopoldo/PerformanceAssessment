@@ -672,6 +672,71 @@ body {
     .timeline-content {
         padding: 1.25rem 1.5rem;
     }
+
+    /* Orientação Mobile */
+    .orientacao-section,
+    .tutorial-section,
+    .faq-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .orientacao-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .orientacao-card {
+        padding: 1.5rem;
+    }
+
+    .orientacao-importante {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .importante-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .importante-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Tutorial Mobile */
+    .tutorial-info {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial-card {
+        padding: 1.25rem;
+    }
+
+    .tutorial-note {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .note-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .note-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* FAQ Mobile */
+    .faq-question {
+        padding: 1.25rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 1.5rem 1.25rem 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -682,6 +747,421 @@ body {
     .timeline-content {
         padding: 1rem;
     }
+
+    .orientacao-section,
+    .tutorial-section,
+    .faq-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .orientacao-card {
+        padding: 1.25rem;
+    }
+
+    .orientacao-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .orientacao-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .orientacao-title {
+        font-size: 1.1rem;
+    }
+
+    .orientacao-description {
+        font-size: 0.9rem;
+    }
+
+    .faq-question {
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 1.25rem 1rem 1.25rem;
+    }
+
+    .tutorial-card {
+        padding: 1rem;
+    }
+
+    .tutorial-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .tutorial-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .tutorial-card-title {
+        font-size: 0.95rem;
+    }
+
+    .tutorial-card-description {
+        font-size: 0.85rem;
+    }
+
+    .tutorial-note {
+        padding: 1.25rem;
+    }
+
+    .note-title {
+        font-size: 1.1rem;
+    }
+
+    .note-description {
+        font-size: 0.875rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.875rem;
+    }
+}
+
+/* ============================================
+   SEÇÃO DE ORIENTAÇÃO
+   ============================================ */
+.orientacao-section {
+    background: var(--gray-light);
+    padding: 5rem 2rem;
+}
+
+.orientacao-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.orientacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.orientacao-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.orientacao-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-blue);
+}
+
+.orientacao-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.orientacao-icon svg {
+    width: 30px;
+    height: 30px;
+    color: var(--white);
+}
+
+.orientacao-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.orientacao-description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.orientacao-importante {
+    background: linear-gradient(135deg, rgba(0, 61, 130, 0.05) 0%, rgba(0, 86, 179, 0.05) 100%);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.importante-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.importante-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--white);
+}
+
+.importante-content {
+    flex: 1;
+}
+
+.importante-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0.75rem;
+}
+
+.importante-description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* ============================================
+   SEÇÃO VÍDEO TUTORIAL
+   ============================================ */
+.tutorial-section {
+    background: var(--white);
+    padding: 5rem 2rem;
+}
+
+.tutorial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tutorial-content {
+    display: grid;
+    gap: 3rem;
+}
+
+.video-wrapper {
+    width: 100%;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    background: var(--gray-light);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+.tutorial-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tutorial-card {
+    background: var(--gray-light);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.tutorial-card:hover {
+    background: var(--white);
+    border-color: var(--primary-blue);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.tutorial-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tutorial-icon svg {
+    width: 26px;
+    height: 26px;
+    color: var(--white);
+}
+
+.tutorial-text {
+    flex: 1;
+}
+
+.tutorial-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.tutorial-card-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.tutorial-note {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.note-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--white);
+}
+
+.note-content {
+    flex: 1;
+}
+
+.note-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.note-description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ============================================
+   SEÇÃO FAQ
+   ============================================ */
+.faq-section {
+    background: var(--gray-light);
+    padding: 5rem 2rem;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: var(--gray-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.faq-item:hover {
+    border-color: var(--primary-blue);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: left;
+    transition: var(--transition);
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-question:hover {
+    color: var(--primary-blue);
+}
+
+.faq-question span {
+    flex: 1;
+}
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-blue);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 2rem 1.5rem 2rem;
+}
+
+.faq-answer p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
 }
 
 /* ============================================
