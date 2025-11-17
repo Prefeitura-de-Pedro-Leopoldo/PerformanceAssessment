@@ -1,0 +1,27 @@
+/* ============================================
+   VARIÁVEIS CSS - Sistema de Design
+   ============================================ */
+
+:root {
+    /* Cores Principais */
+    --primary-blue: #003d82;
+    --primary-blue-dark: #002856;
+    --secondary-blue: #0056b3;
+    --accent-gold: #d4af37;
+
+    /* Cores de Texto */
+    --text-dark: #212529;
+    --text-light: #6c757d;
+
+    /* Cores Neutras */
+    --white: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray-medium: #dee2e6;
+    --overlay-dark: rgba(0, 0, 0, 0.6);
+
+    /* Efeitos e Transições */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}

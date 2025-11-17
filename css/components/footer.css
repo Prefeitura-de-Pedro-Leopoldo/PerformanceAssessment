@@ -1,0 +1,27 @@
+/* ============================================
+   FOOTER - Rodapé
+   ============================================ */
+
+.footer-section {
+    background: var(--primary-blue-dark);
+    color: var(--white);
+    padding: 3rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-copy {
+    text-align: center;
+}
+
+.footer-copy p {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}

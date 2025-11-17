@@ -1,0 +1,24 @@
+/* ============================================
+   SISTEMA DE AVALIAÇÃO DE DESEMPENHO
+   Prefeitura Municipal de Pedro Leopoldo
+
+   Arquivo Principal - Importa todos os módulos CSS
+   ============================================ */
+
+/* Base - Fundação do projeto */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/animations.css';
+
+/* Components - Componentes reutilizáveis */
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/cronograma.css';
+@import './components/orientacao.css';
+@import './components/tutorial.css';
+@import './components/faq.css';
+@import './components/footer.css';
+
+/* Layouts - Estruturas de página */
+@import './layouts/responsive.css';
+@import './layouts/accessibility.css';

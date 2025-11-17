@@ -1,0 +1,140 @@
+/* ============================================
+   7. TUTORIAL - SEÇÃO DE VÍDEO
+   ============================================ */
+.tutorial-section {
+    background: var(--white);
+    padding: 5rem 2rem;
+}
+
+.tutorial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tutorial-content {
+    display: grid;
+    gap: 3rem;
+}
+
+.video-wrapper {
+    width: 100%;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    background: var(--gray-light);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+.tutorial-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tutorial-card {
+    background: var(--gray-light);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.tutorial-card:hover {
+    background: var(--white);
+    border-color: var(--primary-blue);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.tutorial-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tutorial-icon svg {
+    width: 26px;
+    height: 26px;
+    color: var(--white);
+}
+
+.tutorial-text {
+    flex: 1;
+}
+
+.tutorial-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.tutorial-card-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.tutorial-note {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.note-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--white);
+}
+
+.note-content {
+    flex: 1;
+}
+
+.note-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.note-description {
+    font-size: 0.95rem;
+    color: var(--text-light);

@@ -1,0 +1,105 @@
+/* ============================================
+   6. ORIENTAÇÕES - CARDS INFORMATIVOS
+   ============================================ */
+.orientacao-section {
+    background: var(--gray-light);
+    padding: 5rem 2rem;
+}
+
+.orientacao-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.orientacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.orientacao-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.orientacao-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-blue);
+}
+
+.orientacao-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.orientacao-icon svg {
+    width: 30px;
+    height: 30px;
+    color: var(--white);
+}
+
+.orientacao-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.orientacao-description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.orientacao-importante {
+    background: linear-gradient(135deg, rgba(0, 61, 130, 0.05) 0%, rgba(0, 86, 179, 0.05) 100%);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.importante-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.importante-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--white);
+}
+
+.importante-content {
+    flex: 1;
+}
+
+.importante-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0.75rem;
+}
+
+.importante-description {
+    font-size: 0.95rem;
