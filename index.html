@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <!-- ========================================
+       HEAD - Metadados e Recursos Externos
+       ======================================== -->
   <head>
+    <!-- Meta Tags Essenciais -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Prefeitura Municipal de Pedro Leopoldo - Poder Executivo Municipal" />
+
+    <!-- Título da Página -->
     <title>Prefeitura de Pedro Leopoldo - Poder Executivo Municipal</title>
+
+    <!-- Pré-conexão com Google Fonts para Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importação de Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Estilos CSS Customizados -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
-    <!-- Cabeçalho Fixo -->
+    <!-- ========================================
+         HEADER - Cabeçalho e Navegação Principal
+         ======================================== -->
     <header class="header-top">
       <div class="header-container">
+        <!-- Logo da Prefeitura -->
         <div class="logo-wrapper">
           <img src="./comissionado/src/assets/img/brasao.png" alt="Brasão da Prefeitura Municipal de Pedro Leopoldo" class="header-logo" />
         </div>
 
+        <!-- Navegação Principal -->
         <nav class="main-nav" id="mainNav">
+          <!-- Botão Menu Mobile (Hamburger) -->
           <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu">
             <span></span>
             <span></span>
             <span></span>
           </button>
 
+          <!-- Menu de Navegação -->
           <ul class="nav-menu" id="navMenu">
+            <!-- Links para Formulários de Avaliação -->
             <li class="nav-item">
               <a href="./efetivo/index.html" class="nav-link" target="_blank"
                 >Avaliação de
@@ -38,6 +58,8 @@
                 <p>de Cargo em Comissão</p></a
               >
             </li>
+
+            <!-- Links de Navegação Interna -->
             <li class="nav-item">
               <a href="#orientacao" class="nav-link">Orientações</a>
             </li>
@@ -55,14 +77,22 @@
       </div>
     </header>
 
-    <!-- Hero Section com Imagem de Fundo -->
+    <!-- ========================================
+         HERO SECTION - Seção Principal de Destaque
+         ======================================== -->
     <section class="hero-section">
+      <!-- Overlay Escuro sobre a Imagem de Fundo -->
       <div class="hero-overlay"></div>
+
+      <!-- Conteúdo Principal do Hero -->
       <div class="hero-content">
+        <!-- Título e Subtítulo -->
         <h1 class="hero-title">Prefeitura de Pedro Leopoldo</h1>
         <p class="hero-subtitle">Poder Executivo Municipal - Pedro Leopoldo/MG</p>
 
+        <!-- Botões de Acesso Rápido -->
         <div class="hero-buttons">
+          <!-- Botão Avaliação Servidor Efetivo -->
           <a href="./efetivo/index.html" class="hero-btn secondary" target="_blank">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -70,6 +100,8 @@
             </svg>
             Avaliação Servidor Efetivo
           </a>
+
+          <!-- Botão Avaliação Cargo em Comissão -->
           <a href="./comissionado/index.html" class="hero-btn secondary" target="_blank">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -82,18 +114,24 @@
         </div>
       </div>
 
+      <!-- Indicador de Scroll (Seta Animada) -->
       <div class="scroll-indicator">
         <div class="scroll-arrow"></div>
       </div>
     </section>
 
-    <!-- Seção Cronograma e Prazos -->
+    <!-- ========================================
+         CRONOGRAMA - Linha do Tempo de Prazos
+         ======================================== -->
     <section class="cronograma-section" id="cronograma">
       <div class="cronograma-container">
+        <!-- Título e Subtítulo da Seção -->
         <h2 class="section-title">Cronograma e Prazos</h2>
         <p class="section-subtitle">Confira os prazos importantes para o processo de avaliação de desempenho 2025</p>
 
+        <!-- Timeline com os Eventos -->
         <div class="timeline">
+          <!-- Evento 1: Avaliação dos Servidores -->
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
@@ -103,6 +141,7 @@
             </div>
           </div>
 
+          <!-- Evento 2: Pedido de Reconsideração -->
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
@@ -114,6 +153,7 @@
             </div>
           </div>
 
+          <!-- Evento 3: Recurso à Comissão Recursal -->
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
@@ -125,6 +165,7 @@
             </div>
           </div>
 
+          <!-- Evento 4: Análise da Comissão -->
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
@@ -136,6 +177,7 @@
             </div>
           </div>
 
+          <!-- Evento 5: Homologação -->
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
@@ -148,13 +190,18 @@
       </div>
     </section>
 
-    <!-- Seção de Orientação -->
+    <!-- ========================================
+         ORIENTAÇÕES - Guia Passo a Passo
+         ======================================== -->
     <section class="orientacao-section" id="orientacao">
       <div class="orientacao-container">
+        <!-- Título e Subtítulo da Seção -->
         <h2 class="section-title">Orientações para Avaliação</h2>
         <p class="section-subtitle">Guia passo a passo para realizar a avaliação de desempenho</p>
 
+        <!-- Grid com os Cards de Orientação -->
         <div class="orientacao-grid">
+          <!-- Card 1: Acessar Formulário -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -169,6 +216,7 @@
             </p>
           </div>
 
+          <!-- Card 2: Preencher Cabeçalho -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -182,6 +230,7 @@
             </p>
           </div>
 
+          <!-- Card 3: Avaliar Comportamentos -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -196,6 +245,7 @@
             </p>
           </div>
 
+          <!-- Card 4: Resultados -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -211,6 +261,7 @@
             <p class="orientacao-description">A partir do resultado final, registre as evidências que justifiquem as notas atribuídas no período avaliado.</p>
           </div>
 
+          <!-- Card 5: Dificultadores -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -226,6 +277,7 @@
             </p>
           </div>
 
+          <!-- Card 6: Feedback -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -241,6 +293,7 @@
             </p>
           </div>
 
+          <!-- Card 7: Plano de Desenvolvimento -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -255,6 +308,7 @@
             </p>
           </div>
 
+          <!-- Card 8: Assinaturas -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -272,6 +326,7 @@
             </p>
           </div>
 
+          <!-- Card 9: Enviar Documento -->
           <div class="orientacao-card">
             <div class="orientacao-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -286,6 +341,7 @@
           </div>
         </div>
 
+        <!-- Alerta Importante -->
         <div class="orientacao-importante">
           <div class="importante-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -305,17 +361,27 @@
       </div>
     </section>
 
-    <!-- Seção Vídeo Tutorial -->
+    <!-- ========================================
+         TUTORIAL - Vídeo Demonstrativo
+         ======================================== -->
     <section class="tutorial-section" id="tutorial">
       <div class="tutorial-container">
+        <!-- Título e Subtítulo da Seção -->
         <h2 class="section-title">Vídeo Tutorial</h2>
         <p class="section-subtitle">Assista ao passo a passo completo de como preencher a avaliação de desempenho</p>
 
         <div class="tutorial-content">
+          <!-- Container do Vídeo -->
           <div class="video-wrapper">
             <div class="video-container">
-              <!-- Substitua o src abaixo pelo link do seu vídeo do YouTube -->
-              <!-- Para obter o link embed: vá ao vídeo no YouTube > Compartilhar > Incorporar > copie o link que aparece em src="" -->
+              <!--
+                IFRAME - Vídeo do YouTube
+                Para substituir o vídeo:
+                1. Acesse seu vídeo no YouTube
+                2. Clique em "Compartilhar"
+                3. Selecione "Incorporar"
+                4. Copie o código e substitua o src abaixo
+              -->
               <iframe
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                 title="Tutorial - Como Preencher a Avaliação de Desempenho"
@@ -326,7 +392,9 @@
             </div>
           </div>
 
+          <!-- Informações sobre o Tutorial -->
           <div class="tutorial-info">
+            <!-- Card: Duração do Vídeo -->
             <div class="tutorial-card">
               <div class="tutorial-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -340,6 +408,7 @@
               </div>
             </div>
 
+            <!-- Card: Conteúdo do Tutorial -->
             <div class="tutorial-card">
               <div class="tutorial-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -354,6 +423,7 @@
               </div>
             </div>
 
+            <!-- Card: Público-Alvo -->
             <div class="tutorial-card">
               <div class="tutorial-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -370,6 +440,7 @@
             </div>
           </div>
 
+          <!-- Nota Adicional -->
           <div class="tutorial-note">
             <div class="note-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -390,13 +461,18 @@
       </div>
     </section>
 
-    <!-- Seção FAQ -->
+    <!-- ========================================
+         FAQ - Perguntas Frequentes (Accordion)
+         ======================================== -->
     <section class="faq-section" id="faq">
       <div class="faq-container">
+        <!-- Título e Subtítulo da Seção -->
         <h2 class="section-title">Perguntas Frequentes</h2>
         <p class="section-subtitle">Respostas para as dúvidas mais comuns sobre o processo de avaliação</p>
 
+        <!-- Lista de Perguntas e Respostas (Accordion) -->
         <div class="faq-list">
+          <!-- Pergunta 1 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>1. O que é a avaliação de desempenho?</span>
@@ -413,6 +489,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 2 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>2. A quem se destina a avaliação de desempenho?</span>
@@ -428,6 +505,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 3 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>3. Quem deve realizar a avaliação?</span>
@@ -444,6 +522,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 4 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>4. Quais são os critérios de avaliação?</span>
@@ -468,6 +547,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 5 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>5. Quando as avaliações de desempenho são aplicadas?</span>
@@ -480,6 +560,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 6 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>6. Qual o desempenho considerado satisfatório na avaliação de desempenho?</span>
@@ -492,6 +573,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 7 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>7. O que acontece caso o servidor se recuse a assinar a avaliação de desempenho realizada?</span>
@@ -504,6 +586,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 8 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>8. O servidor pode interpor recurso caso não concorde com o resultado?</span>
@@ -519,6 +602,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 9 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>9. Qual o percentual de desempenho será considerado satisfatório em cada avaliação?</span>
@@ -531,6 +615,7 @@
             </div>
           </div>
 
+          <!-- Pergunta 10 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>10. Como será classificado o desempenho de servidor com base na nota final obtida?</span>
@@ -547,9 +632,10 @@
             </div>
           </div>
 
+          <!-- Pergunta 11 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>12. Como o servidor receberá o feedback da pontuação obtida?</span>
+              <span>11. Como o servidor receberá o feedback da pontuação obtida?</span>
               <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
@@ -565,15 +651,22 @@
       </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- ========================================
+         FOOTER - Rodapé com Copyright
+         ======================================== -->
     <footer class="footer-section">
       <div class="footer-content">
+        <!-- Informações de Copyright -->
         <div class="footer-copy">
           <p>&copy; 2025 Prefeitura Municipal de Pedro Leopoldo. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
 
+    <!-- ========================================
+         JAVASCRIPT - Scripts de Interatividade
+         ======================================== -->
+    <!-- Script para funcionalidades do menu, accordion e animações -->
     <script src="./script.js"></script>
   </body>
 </html>
