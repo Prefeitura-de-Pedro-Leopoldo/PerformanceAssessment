@@ -1,27 +1,64 @@
-/* Reset e configurações básicas */
+/* ============================================
+   SISTEMA DE AVALIAÇÃO DE DESEMPENHO
+   Prefeitura Municipal de Pedro Leopoldo
+
+   ÍNDICE:
+   1. Reset e Variáveis CSS
+   2. Tipografia e Elementos Globais
+   3. Header - Cabeçalho e Navegação
+   4. Hero Section - Seção Principal
+   5. Cronograma - Timeline de Prazos
+   6. Orientações - Cards Informativos
+   7. Tutorial - Seção de Vídeo
+   8. FAQ - Perguntas Frequentes (Accordion)
+   9. Footer - Rodapé
+   10. Animações e Efeitos
+   11. Responsividade - Media Queries (Mobile)
+   12. Responsividade - Seções Específicas
+   13. Acessibilidade e Foco
+   ============================================ */
+
+/* ============================================
+   1. RESET E VARIÁVEIS CSS
+   ============================================ */
+
+/* Reset Global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Variáveis CSS (Custom Properties) */
 :root {
+    /* Cores Principais */
     --primary-blue: #003d82;
     --primary-blue-dark: #002856;
     --secondary-blue: #0056b3;
     --accent-gold: #d4af37;
+
+    /* Cores de Texto */
     --text-dark: #212529;
     --text-light: #6c757d;
+
+    /* Cores Neutras */
     --white: #ffffff;
     --gray-light: #f8f9fa;
     --gray-medium: #dee2e6;
     --overlay-dark: rgba(0, 0, 0, 0.6);
+
+    /* Efeitos e Transições */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* ============================================
+   2. TIPOGRAFIA E ELEMENTOS GLOBAIS
+   ============================================ */
+
+/* Configurações do Body */
 body {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--text-dark);
@@ -30,8 +67,10 @@ body {
 }
 
 /* ============================================
-   CABEÇALHO FIXO
+   3. HEADER - CABEÇALHO E NAVEGAÇÃO
    ============================================ */
+
+/* Container Principal do Header */
 .header-top {
     position: fixed;
     top: 0;
@@ -163,7 +202,7 @@ body {
 }
 
 /* ============================================
-   HERO SECTION
+   4. HERO SECTION - SEÇÃO PRINCIPAL
    ============================================ */
 .hero-section {
     position: relative;
@@ -317,7 +356,7 @@ body {
 }
 
 /* ============================================
-   RODAPÉ
+   9. FOOTER - RODAPÉ
    ============================================ */
 .footer-section {
     background: var(--primary-blue-dark);
@@ -359,7 +398,7 @@ body {
 }
 
 /* ============================================
-   ANIMAÇÕES
+   10. ANIMAÇÕES E EFEITOS
    ============================================ */
 @keyframes fadeInDown {
     from {
@@ -396,7 +435,7 @@ body {
 }
 
 /* ============================================
-   RESPONSIVIDADE
+   11. RESPONSIVIDADE - MEDIA QUERIES (MOBILE)
    ============================================ */
 
 @media (max-width: 1024px) {
@@ -535,7 +574,7 @@ body {
 }
 
 /* ============================================
-   SEÇÃO CRONOGRAMA E PRAZOS
+   5. CRONOGRAMA - TIMELINE DE PRAZOS
    ============================================ */
 .cronograma-section {
     background: var(--white);
@@ -646,7 +685,7 @@ body {
 
 
 /* ============================================
-   RESPONSIVIDADE DAS NOVAS SEÇÕES
+   12. RESPONSIVIDADE - SEÇÕES ESPECÍFICAS
    ============================================ */
 @media (max-width: 768px) {
     .cronograma-section {
@@ -825,7 +864,7 @@ body {
 }
 
 /* ============================================
-   SEÇÃO DE ORIENTAÇÃO
+   6. ORIENTAÇÕES - CARDS INFORMATIVOS
    ============================================ */
 .orientacao-section {
     background: var(--gray-light);
@@ -934,7 +973,7 @@ body {
 }
 
 /* ============================================
-   SEÇÃO VÍDEO TUTORIAL
+   7. TUTORIAL - SEÇÃO DE VÍDEO
    ============================================ */
 .tutorial-section {
     background: var(--white);
@@ -1078,7 +1117,7 @@ body {
 }
 
 /* ============================================
-   SEÇÃO FAQ
+   8. FAQ - PERGUNTAS FREQUENTES (ACCORDION)
    ============================================ */
 .faq-section {
     background: var(--gray-light);
@@ -1165,7 +1204,7 @@ body {
 }
 
 /* ============================================
-   ACESSIBILIDADE
+   13. ACESSIBILIDADE E FOCO
    ============================================ */
 
 /* Foco visível */
