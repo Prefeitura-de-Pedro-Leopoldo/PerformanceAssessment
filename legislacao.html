@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <!-- ========================================
+       HEAD - Metadados e Recursos Externos
+       ======================================== -->
+  <head>
+    <!-- Meta Tags Essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Legislação sobre Avaliação de Desempenho - Prefeitura Municipal de Pedro Leopoldo" />
+
+    <!-- Título da Página -->
+    <title>Legislação - Avaliação de Desempenho | Prefeitura de Pedro Leopoldo</title>
+
+    <!-- Pré-conexão com Google Fonts para Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importação de Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Estilos CSS Modulares -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components/legislacao.css" />
+  </head>
+
+  <body>
+    <!-- ========================================
+         HEADER - Cabeçalho e Navegação Principal
+         ======================================== -->
+    <header class="header-top">
+      <div class="header-container">
+        <!-- Logo da Prefeitura -->
+        <div class="logo-wrapper">
+          <img src="./comissionado/src/assets/img/brasao.png" alt="Brasão da Prefeitura Municipal de Pedro Leopoldo" class="header-logo" />
+        </div>
+
+        <!-- Navegação Principal -->
+        <nav class="main-nav" id="mainNav">
+          <!-- Botão Menu Mobile (Hamburger) -->
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Menu de Navegação -->
+          <ul class="nav-menu" id="navMenu">
+            <!-- Links para Formulários de Avaliação -->
+            <li class="nav-item">
+              <a href="./efetivo/index.html" class="nav-link" target="_blank"
+                >Avaliação de
+                <p>Servidor Efetivo</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="./comissionado/index.html" class="nav-link" target="_blank"
+                >Avaliação de Servidor em Exercício
+                <p>de Cargo em Comissão</p></a
+              >
+            </li>
+
+            <!-- Links de Navegação Interna -->
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a href="./index.html#orientacao" class="nav-link">Orientações</a>
+            </li>
+            <li class="nav-item">
+              <a href="./index.html#tutorial" class="nav-link">Tutorial</a>
+            </li>
+            <li class="nav-item">
+              <a href="./index.html#faq" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a href="./legislacao.html" class="nav-link active">Legislação</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION - Cabeçalho da Página
+         ======================================== -->
+    <section class="hero-section-legislacao">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Legislação</h1>
+        <p class="hero-subtitle">Base legal e normativas sobre Avaliação de Desempenho</p>
+      </div>
+    </section>
+
+    <!-- ========================================
+         LEGISLAÇÃO - Documentos e Normativas
+         ======================================== -->
+    <section class="legislacao-section" id="legislacao">
+      <div class="legislacao-container">
+        <!-- Título e Subtítulo da Seção -->
+        <h2 class="section-title">Documentos Legais</h2>
+        <p class="section-subtitle">Leis, decretos e normativas que regulamentam a avaliação de desempenho</p>
+
+        <!-- Filtros de Categoria -->
+        <div class="legislacao-filters">
+          <button class="filter-btn active" data-filter="todos">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="9" x2="15" y2="9"></line>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+            Todos os Documentos
+          </button>
+          <button class="filter-btn" data-filter="leis">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            Leis
+          </button>
+          <button class="filter-btn" data-filter="decretos">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            Decretos
+          </button>
+          <button class="filter-btn" data-filter="portarias">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <circle cx="12" cy="13" r="2"></circle>
+            </svg>
+            Portarias
+          </button>
+          <button class="filter-btn" data-filter="outros">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+            Outros
+          </button>
+        </div>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Pesquisar por nome, número ou palavra-chave..."
+            aria-label="Pesquisar legislação"
+          />
+        </div>
+
+        <!-- Grid de Documentos -->
+        <div class="documentos-grid" id="documentosGrid">
+          <!-- Exemplo de Card de Documento - LEIS -->
+          <!-- Você pode adicionar mais cards seguindo este padrão -->
+
+          <!-- Card 1 - Exemplo -->
+          <div class="documento-card" data-category="leis">
+            <div class="documento-header">
+              <div class="documento-tipo lei">
+                <svg class="tipo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Lei</span>
+              </div>
+              <div class="documento-data">
+                <svg class="data-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>01/01/2024</span>
+              </div>
+            </div>
+
+            <div class="documento-content">
+              <h3 class="documento-titulo">Lei Complementar nº XXX/2024</h3>
+              <p class="documento-ementa">
+                Dispõe sobre o Estatuto dos Servidores Públicos Municipais e estabelece as diretrizes para avaliação de desempenho.
+              </p>
+
+              <div class="documento-tags">
+                <span class="tag">Avaliação de Desempenho</span>
+                <span class="tag">Estatuto</span>
+                <span class="tag">Servidores</span>
+              </div>
+            </div>
+
+            <div class="documento-footer">
+              <a href="#" class="btn-download" data-pdf="documento1.pdf">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Baixar PDF
+              </a>
+              <button class="btn-visualizar" data-pdf="documento1.pdf">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Visualizar
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 - Exemplo Decreto -->
+          <div class="documento-card" data-category="decretos">
+            <div class="documento-header">
+              <div class="documento-tipo decreto">
+                <svg class="tipo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+                <span>Decreto</span>
+              </div>
+              <div class="documento-data">
+                <svg class="data-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>15/02/2024</span>
+              </div>
+            </div>
+
+            <div class="documento-content">
+              <h3 class="documento-titulo">Decreto Municipal nº XXX/2024</h3>
+              <p class="documento-ementa">
+                Regulamenta os procedimentos e critérios para a avaliação de desempenho dos servidores públicos municipais.
+              </p>
+
+              <div class="documento-tags">
+                <span class="tag">Regulamentação</span>
+                <span class="tag">Procedimentos</span>
+                <span class="tag">Critérios</span>
+              </div>
+            </div>
+
+            <div class="documento-footer">
+              <a href="#" class="btn-download" data-pdf="documento2.pdf">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Baixar PDF
+              </a>
+              <button class="btn-visualizar" data-pdf="documento2.pdf">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Visualizar
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 - Exemplo Portaria -->
+          <div class="documento-card" data-category="portarias">
+            <div class="documento-header">
+              <div class="documento-tipo portaria">
+                <svg class="tipo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <circle cx="12" cy="13" r="2"></circle>
+                </svg>
+                <span>Portaria</span>
+              </div>
+              <div class="documento-data">
+                <svg class="data-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>03/03/2024</span>
+              </div>
+            </div>
+
+            <div class="documento-content">
+              <h3 class="documento-titulo">Portaria nº XXX/2024</h3>
+              <p class="documento-ementa">
+                Institui a Comissão Recursal de Avaliação de Desempenho e estabelece suas competências e procedimentos.
+              </p>
+
+              <div class="documento-tags">
+                <span class="tag">Comissão</span>
+                <span class="tag">Recursos</span>
+                <span class="tag">Competências</span>
+              </div>
+            </div>
+
+            <div class="documento-footer">
+              <a href="#" class="btn-download" data-pdf="documento3.pdf">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Baixar PDF
+              </a>
+              <button class="btn-visualizar" data-pdf="documento3.pdf">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Visualizar
+              </button>
+            </div>
+          </div>
+
+          <!-- Mensagem quando não há resultados -->
+          <div class="no-results" id="noResults" style="display: none;">
+            <svg class="no-results-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <h3>Nenhum documento encontrado</h3>
+            <p>Tente ajustar seus filtros ou termos de pesquisa.</p>
+          </div>
+        </div>
+
+        <!-- Informação Importante -->
+        <div class="legislacao-importante">
+          <div class="importante-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <div class="importante-content">
+            <h4 class="importante-title">Importante</h4>
+            <p class="importante-description">
+              Todos os documentos disponibilizados nesta seção são oficiais e estão em conformidade com a legislação vigente.
+              Em caso de dúvidas sobre a interpretação ou aplicação das normas, entre em contato com a Diretoria de Gestão de Pessoas ou com a Assessoria Jurídica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de Visualização de PDF -->
+    <div class="modal-overlay" id="pdfModal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle">Visualizar Documento</h3>
+          <button class="modal-close" id="closeModal" aria-label="Fechar modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe id="pdfViewer" class="pdf-viewer" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================
+         FOOTER - Rodapé com Copyright
+         ======================================== -->
+    <footer class="footer-section">
+      <div class="footer-content">
+        <!-- Informações de Copyright -->
+        <div class="footer-copy">
+          <p>&copy; 2025 Prefeitura Municipal de Pedro Leopoldo. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+         JAVASCRIPT - Scripts de Interatividade
+         ======================================== -->
+    <!-- Script principal com módulos ES6 -->
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/legislacao.js"></script>
+  </body>
+</html>
