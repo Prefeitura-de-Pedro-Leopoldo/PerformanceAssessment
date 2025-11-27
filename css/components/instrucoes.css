@@ -1,0 +1,604 @@
+/* ========================================
+   INSTRUÇÕES CANVA - Estilos da Seção
+   ======================================== */
+
+.instrucoes-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
+}
+
+.instrucoes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.instrucoes-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.instrucoes-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Card Principal de Download */
+.instrucoes-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.instrucoes-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícone Principal */
+.instrucoes-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.instrucoes-icon svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+/* Informações do Card */
+.instrucoes-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.instrucoes-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.instrucoes-description {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Detalhes do Arquivo */
+.instrucoes-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border-left: 3px solid #667eea;
+}
+
+.detail-icon {
+  width: 20px;
+  height: 20px;
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.detail-item span {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Ações do Card */
+.instrucoes-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: auto;
+}
+
+/* Grupo de Botões */
+.btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-visualizar-instrucoes,
+.btn-download-instrucoes {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-visualizar-instrucoes {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-visualizar-instrucoes:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.btn-download-instrucoes {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-download-instrucoes:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Botão Download em Largura Total */
+.btn-download-full {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-download-full:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: white;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Nota Informativa */
+.instrucoes-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border-left: 4px solid #f59e0b;
+  border-radius: 10px;
+}
+
+.instrucoes-note .note-icon {
+  width: 20px;
+  height: 20px;
+  color: #f59e0b;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.instrucoes-note p {
+  margin: 0;
+  font-size: 14px;
+  color: #92400e;
+  line-height: 1.6;
+}
+
+/* Preview/Lista de Conteúdos */
+.instrucoes-preview {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 20px;
+  padding: 40px;
+  border: 2px solid #e2e8f0;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.preview-icon {
+  width: 32px;
+  height: 32px;
+  color: #667eea;
+}
+
+.preview-header h4 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.preview-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preview-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.preview-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.preview-item span {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Visualizador de Apresentação Embutido - Container Principal */
+.instrucoes-viewer-container {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.viewer-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.presentation-iframe {
+  display: block;
+  border-radius: 12px;
+}
+
+/* Visualizador de Apresentação Embutido - Antigo (manter para compatibilidade) */
+.instrucoes-viewer {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.viewer-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.viewer-icon {
+  width: 32px;
+  height: 32px;
+  color: #667eea;
+}
+
+.viewer-header h4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.viewer-container {
+  position: relative;
+  width: 100%;
+  height: 700px; /* Altura maior para melhor visualização */
+  background: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pptx-viewer-inline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.viewer-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
+  text-align: center;
+  background: white;
+}
+
+.placeholder-icon {
+  width: 64px;
+  height: 64px;
+  color: #cbd5e1;
+}
+
+.viewer-placeholder h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.viewer-placeholder p {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.viewer-placeholder strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.viewer-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-left: 4px solid #3b82f6;
+  border-radius: 10px;
+}
+
+.viewer-info .info-icon {
+  width: 20px;
+  height: 20px;
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.viewer-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #1e40af;
+  line-height: 1.6;
+}
+
+.viewer-preview-list {
+  margin-top: 24px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.viewer-preview-list h5 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.viewer-preview-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.viewer-preview-list li {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  padding-left: 8px;
+}
+
+/* Animações */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.instrucoes-card,
+.instrucoes-preview,
+.instrucoes-viewer-container {
+  animation: slideUp 0.6s ease forwards;
+}
+
+.instrucoes-preview {
+  animation-delay: 0.1s;
+}
+
+.instrucoes-viewer-container {
+  animation-delay: 0.2s;
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+  .instrucoes-cards-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .instrucoes-preview,
+  .instrucoes-viewer-container {
+    animation-delay: 0s;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .viewer-wrapper iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .instrucoes-section {
+    padding: 60px 20px;
+  }
+
+  .instrucoes-card,
+  .instrucoes-preview,
+  .instrucoes-viewer-container {
+    padding: 30px 24px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .viewer-header h4 {
+    font-size: 20px;
+  }
+
+  .viewer-preview-list h5 {
+    font-size: 16px;
+  }
+
+  .instrucoes-title {
+    font-size: 24px;
+  }
+
+  .instrucoes-description {
+    font-size: 15px;
+  }
+
+  .viewer-wrapper iframe {
+    height: 400px;
+  }
+
+  .instrucoes-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .instrucoes-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-download-instrucoes {
+    font-size: 16px;
+    padding: 16px 28px;
+  }
+
+  .preview-header h4 {
+    font-size: 20px;
+  }
+
+  .preview-item span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instrucoes-section {
+    padding: 40px 16px;
+  }
+
+  .instrucoes-card,
+  .instrucoes-preview,
+  .instrucoes-viewer-container {
+    padding: 24px 20px;
+  }
+
+  .instrucoes-title {
+    font-size: 22px;
+  }
+
+  .instrucoes-description {
+    font-size: 14px;
+  }
+
+  .viewer-wrapper iframe {
+    height: 350px;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .btn-download-instrucoes {
+    font-size: 15px;
+    padding: 14px 24px;
+  }
+
+  .preview-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .preview-item {
+    padding: 12px;
+  }
+}

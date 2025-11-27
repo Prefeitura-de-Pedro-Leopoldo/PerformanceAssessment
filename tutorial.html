@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tutorial em Vídeo e Instruções Complementares para Avaliação de Desempenho" />
+    <meta name="keywords" content="tutorial, vídeo, instruções, avaliação de desempenho, prefeitura" />
+    <title>Tutorial e Instruções - Avaliação de Desempenho | Prefeitura de Pedro Leopoldo</title>
+
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components/header.css" />
+    <link rel="stylesheet" href="./css/components/tutorial-page.css" />
+    <link rel="stylesheet" href="./css/components/tutorial.css" />
+    <link rel="stylesheet" href="./css/components/instrucoes.css" />
+    <link rel="stylesheet" href="./css/components/footer.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <!-- ========================================
+         HEADER - Cabeçalho com Navegação
+         ======================================== -->
+    <header class="header-top">
+      <div class="header-container">
+        <!-- Logo da Prefeitura -->
+        <div class="logo-wrapper">
+          <img src="./comissionado/src/assets/img/brasao.png" alt="Brasão da Prefeitura Municipal de Pedro Leopoldo" class="header-logo" />
+        </div>
+
+        <!-- Navegação Principal -->
+        <nav class="main-nav" id="mainNav">
+          <!-- Botão Menu Mobile (Hamburger) -->
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Menu de Navegação -->
+          <ul class="nav-menu" id="navMenu">
+            <!-- Links para Formulários de Avaliação -->
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a href="./efetivo/index.html" class="nav-link" target="_blank"
+                >Avaliação de
+                <p>Servidor Efetivo</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="./comissionado/index.html" class="nav-link" target="_blank"
+                >Avaliação de Servidor em Exercício
+                <p>de Cargo em Comissão</p></a
+              >
+            </li>
+            <!-- Links de Navegação Interna -->
+            <li class="nav-item">
+              <a href="./index.html#orientacao" class="nav-link">Orientações</a>
+            </li>
+            <li class="nav-item">
+              <a href="./index.html#faq" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a href="./legislacao.html" class="nav-link active">Legislação</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========================================
+         HERO - Banner da Página
+         ======================================== -->
+    <section class="hero-section-tutorial">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Tutorial e Instruções</h1>
+        <p class="hero-subtitle">Material completo em vídeo e apresentação para facilitar seu processo de avaliação</p>
+      </div>
+    </section>
+
+    <!-- ========================================
+         VÍDEO TUTORIAL - Demonstração em Vídeo
+         ======================================== -->
+
+    <!-- ========================================
+         TUTORIAL - Vídeo Demonstrativo
+         ======================================== -->
+    <section class="tutorial-section" id="tutorial">
+      <div class="tutorial-container">
+        <!-- Título e Subtítulo da Seção -->
+        <h2 class="section-title">Vídeo Tutorial</h2>
+        <p class="section-subtitle">Assista ao passo a passo completo de como preencher a avaliação de desempenho</p>
+
+        <div class="tutorial-content">
+          <!-- Container do Vídeo -->
+          <div class="video-wrapper">
+            <div class="video-container">
+              <!--
+                IFRAME - Vídeo do YouTube
+                Para substituir o vídeo:
+                1. Acesse seu vídeo no YouTube
+                2. Clique em "Compartilhar"
+                3. Selecione "Incorporar"
+                4. Copie o código e substitua o src abaixo
+              -->
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Tutorial - Como Preencher a Avaliação de Desempenho"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Informações sobre o Tutorial -->
+          <div class="tutorial-info">
+            <!-- Card: Duração do Vídeo -->
+            <div class="tutorial-card">
+              <div class="tutorial-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
+              </div>
+              <div class="tutorial-text">
+                <h3 class="tutorial-card-title">Duração</h3>
+                <p class="tutorial-card-description">Aproximadamente 5 minutos</p>
+              </div>
+            </div>
+
+            <!-- Card: Conteúdo do Tutorial -->
+            <div class="tutorial-card">
+              <div class="tutorial-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div class="tutorial-text">
+                <h3 class="tutorial-card-title">Conteúdo</h3>
+                <p class="tutorial-card-description">Demonstração prática do preenchimento completo</p>
+              </div>
+            </div>
+
+            <!-- Card: Público-Alvo -->
+            <div class="tutorial-card">
+              <div class="tutorial-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="tutorial-text">
+                <h3 class="tutorial-card-title">Para quem</h3>
+                <p class="tutorial-card-description">Chefias imediatas e gestores de equipe</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nota Adicional -->
+          <div class="tutorial-note">
+            <div class="note-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <div class="note-content">
+              <h4 class="note-title">Dica Importante</h4>
+              <p class="note-description">
+                Recomendamos assistir ao vídeo completo antes de iniciar o preenchimento da avaliação. Tenha em mãos todas as informações necessárias sobre o
+                servidor que será avaliado. Em caso de dúvidas, reveja as seções específicas do tutorial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         INSTRUÇÕES COMPLEMENTARES - Apresentação
+         ======================================== -->
+    <section class="instrucoes-section" id="instrucoes">
+      <div class="instrucoes-container">
+        <!-- Título e Subtítulo da Seção -->
+        <h2 class="section-title">Instruções Complementares</h2>
+        <p class="section-subtitle">Material visual em apresentação para facilitar o entendimento do processo</p>
+
+        <div class="instrucoes-content">
+          <!-- ==========================================
+               CARDS EM LINHA - Lado a Lado
+               ========================================== -->
+          <div class="instrucoes-cards-row">
+            <!-- ==========================================
+                 CARD 1 - Download da Apresentação
+                 ========================================== -->
+            <div class="instrucoes-card">
+              <!-- Ícone Principal -->
+              <div class="instrucoes-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <path d="M12 18v-6"></path>
+                  <path d="m9 15 3 3 3-3"></path>
+                </svg>
+              </div>
+
+              <!-- Informações -->
+              <div class="instrucoes-info">
+                <h3 class="instrucoes-title">Apresentação de Instruções</h3>
+                <p class="instrucoes-description">
+                  Baixe a apresentação completa com instruções visuais e passo a passo detalhado sobre o processo de avaliação de desempenho. Material
+                  desenvolvido para facilitar o entendimento de todas as etapas.
+                </p>
+
+                <!-- Detalhes do Arquivo -->
+                <div class="instrucoes-details">
+                  <div class="detail-item">
+                    <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                    <span>Formato: PowerPoint (.pptx)</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <span>Conteúdo oficial e atualizado</span>
+                  </div>
+                  <div class="detail-item">
+                    <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download gratuito e imediato</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botão de Download -->
+              <div class="instrucoes-actions">
+                <a
+                  href="./assets/instrucoes/CAPACITAÇÃO AVALIAÇÃO DE DESEMPENHO SERVIDORES EFETIVOS 16-07.pptx"
+                  class="btn-download-instrucoes btn-download-full"
+                  download
+                >
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Baixar Apresentação
+                </a>
+
+                <!-- Nota Informativa -->
+                <div class="instrucoes-note">
+                  <svg class="note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <p>Você pode visualizar online navegando pelos slides abaixo ou baixar para seu computador</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==========================================
+                 CARD 2 - Preview do Conteúdo
+                 ========================================== -->
+            <div class="instrucoes-preview">
+              <div class="preview-header">
+                <svg class="preview-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                  ></path>
+                </svg>
+                <h4>Conteúdo da Apresentação</h4>
+              </div>
+
+              <ul class="preview-list">
+                <li class="preview-item">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Introdução ao processo de avaliação de desempenho</span>
+                </li>
+                <li class="preview-item">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Passo a passo visual para preenchimento dos formulários</span>
+                </li>
+                <li class="preview-item">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Exemplos práticos e casos de uso reais</span>
+                </li>
+                <li class="preview-item">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Dicas importantes para uma avaliação eficaz</span>
+                </li>
+                <li class="preview-item">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Cronograma detalhado e prazos importantes</span>
+                </li>
+                <li class="preview-item">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Informações sobre recursos e pedidos de reconsideração</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Fim da Row de Cards -->
+
+          <!-- ==========================================
+               VISUALIZADOR EMBUTIDO - Google Slides
+               ========================================== -->
+          <div class="instrucoes-viewer-container">
+            <!-- Header do Visualizador -->
+            <div class="viewer-header">
+              <svg class="viewer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <h4>Visualizar Apresentação Online</h4>
+            </div>
+
+            <!-- Iframe do Google Slides -->
+            <div class="viewer-wrapper">
+              <!--
+                GOOGLE SLIDES EMBUTIDO:
+
+                A apresentação do Google Slides será exibida aqui.
+                O link já está configurado e funcionando.
+
+                Para editar a apresentação:
+                1. Acesse: https://docs.google.com/presentation/d/1LWDrUkNbz4WihSv280ly1ANQTTz_SzA-/edit
+                2. Faça as alterações necessárias
+                3. As mudanças aparecerão automaticamente aqui
+
+                Recursos disponíveis:
+                - Autoplay: Começa automaticamente
+                - Loop: Reinicia após último slide
+                - Navegação: Use as setas ou clique nos slides
+                - Fullscreen: Botão de tela cheia disponível
+              -->
+              <iframe
+                src="https://docs.google.com/presentation/d/1LWDrUkNbz4WihSv280ly1ANQTTz_SzA-/embed?start=true&loop=true"
+                frameborder="0"
+                width="100%"
+                height="600"
+                allowfullscreen="true"
+                class="presentation-iframe"
+                title="Apresentação de Instruções - Avaliação de Desempenho"
+              >
+              </iframe>
+            </div>
+
+            <!-- Informação Adicional -->
+            <div class="viewer-info">
+              <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <p>
+                Use os controles da apresentação para navegar entre os slides. Você pode avançar, voltar e visualizar em tela cheia. A apresentação iniciará
+                automaticamente e ficará em loop.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER - Rodapé com Copyright
+         ======================================== -->
+    <footer class="footer-section">
+      <div class="footer-content">
+        <!-- Informações de Copyright -->
+        <div class="footer-copy">
+          <p>&copy; 2025 Prefeitura Municipal de Pedro Leopoldo. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+         JAVASCRIPT - Scripts de Interatividade
+         ======================================== -->
+    <!-- Script principal com módulos ES6 -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

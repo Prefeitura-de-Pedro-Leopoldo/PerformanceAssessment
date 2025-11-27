@@ -110,16 +110,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /**
    * Abre o modal de visualização de PDF
-   * @param {string} pdfPath - Caminho do arquivo PDF
+   * @param {string} pdfId - ID do arquivo no Google Drive ou caminho local
    * @param {string} title - Título do documento
    */
-  function openPdfModal(pdfPath, title) {
+  function openPdfModal(pdfId, title) {
     // Define o título do modal
     modalTitle.textContent = title || 'Visualizar Documento';
 
     // Define o caminho do PDF no iframe
-    // Nota: Para funcionar, você precisa ter os arquivos PDF na pasta adequada
-    pdfViewer.src = `./assets/legislacao/${pdfPath}`;
+    // Se for um ID do Google Drive (sem extensão de arquivo), usa o preview do Google Drive
+    if (pdfId && !pdfId.includes('.pdf')) {
+      pdfViewer.src = `https://drive.google.com/file/d/${pdfId}/preview`;
+    } else {
+      // Caso contrário, usa o caminho local
+      pdfViewer.src = `./assets/legislacao/${pdfId}`;
+    }
 
     // Mostra o modal
     pdfModal.classList.add('active');
@@ -140,11 +145,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // Event listeners para botões de visualizar
   btnVisualizar.forEach((btn) => {
     btn.addEventListener('click', function () {
-      const pdfPath = this.getAttribute('data-pdf');
+      // Tenta pegar data-pdf-id primeiro (Google Drive), senão pega data-pdf (local)
+      const pdfId = this.getAttribute('data-pdf-id') || this.getAttribute('data-pdf');
       const card = this.closest('.documento-card');
       const title = card.querySelector('.documento-titulo').textContent;
 
-      openPdfModal(pdfPath, title);
+      openPdfModal(pdfId, title);
     });
   });
 
@@ -174,20 +180,29 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
 
+      // Tenta pegar data-pdf-id primeiro (Google Drive), senão pega data-pdf (local)
+      const pdfId = this.getAttribute('data-pdf-id');
       const pdfPath = this.getAttribute('data-pdf');
       const card = this.closest('.documento-card');
       const title = card.querySelector('.documento-titulo').textContent;
 
-      // Aqui você pode implementar a lógica de download
-      // Por enquanto, mostra um alerta
       console.log(`Baixando documento: ${title}`);
-      console.log(`Arquivo: ${pdfPath}`);
 
-      // Para implementar o download real, você precisaria:
-      // 1. Ter os arquivos PDF no servidor
-      // 2. Usar um link direto ou fazer fetch do arquivo
-      // Exemplo:
-      // window.location.href = `./assets/legislacao/${pdfPath}`;
+      // Se for um ID do Google Drive (sem extensão de arquivo), abre o link do Google Drive
+      if (pdfId && !pdfId.includes('.pdf')) {
+        console.log(`Google Drive ID: ${pdfId}`);
+        window.open(`https://drive.google.com/file/d/${pdfId}/view?usp=sharing`, '_blank');
+      } else {
+        // Caso contrário, faz download local
+        console.log(`Arquivo local: ${pdfPath}`);
+        const link = document.createElement('a');
+        link.href = `./assets/legislacao/${pdfPath}`;
+        link.download = pdfPath;
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
     });
   });
 
