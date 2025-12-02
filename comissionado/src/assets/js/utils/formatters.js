@@ -25,16 +25,28 @@ export function formatarNumero(numero, decimais = 1) {
 }
 
 /**
- * Formata percentual
+ * Arredonda um número usando arredondamento matemático padrão
+ * (0.5 ou mais arredonda para cima, menos de 0.5 arredonda para baixo)
+ * @param {number} numero - Número a ser arredondado
+ * @returns {number} Número arredondado
+ */
+export function arredondarNumero(numero) {
+  return Math.round(numero)
+}
+
+/**
+ * Formata percentual com arredondamento
  * @param {number} valor - Valor do percentual
  * @returns {string} Percentual formatado
  */
 export function formatarPercentual(valor) {
-  return `${formatarNumero(valor)}%`
+  const valorArredondado = arredondarNumero(valor)
+  return `${valorArredondado}.0%`
 }
 
 export default {
   formatarData,
   formatarNumero,
-  formatarPercentual
+  formatarPercentual,
+  arredondarNumero
 }
