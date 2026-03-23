@@ -37,82 +37,106 @@
          HERO SECTION - Seção Principal de Destaque
          ======================================== -->
     <section class="hero-section">
-      <!-- Overlay Escuro sobre a Imagem de Fundo -->
       <div class="hero-overlay"></div>
 
-      <!-- Conteúdo Principal do Hero -->
       <div class="hero-content">
-        <p class="hero-kicker">Avaliação de desempenho 2026</p>
-        <h1 class="hero-title">Encontre rapidamente tudo o que precisa para conduzir a avaliação</h1>
-        <p class="hero-subtitle">
-          Acesse formulários, tutorial, cronograma e legislação em um portal mais direto, claro e útil para o dia a dia da chefia imediata.
-        </p>
+        <div class="hero-copy">
+          <p class="hero-kicker">Portal da avaliação de desempenho 2026</p>
+          <h1 class="hero-title">Avaliação de desempenho: tudo o que você precisa, em um só lugar.</h1>
+          <p class="hero-subtitle">
+            Encontre formulários, orientações, cronograma, tutorial e legislação em uma navegação mais limpa, direta e institucional.
+          </p>
 
-        <form class="hero-search-form" id="heroSearchForm" role="search">
-          <label class="sr-only" for="heroSearchInput">Pesquisar no portal da avaliação</label>
-          <input
-            class="hero-search-input"
-            id="heroSearchInput"
-            name="hero-search"
-            list="heroSearchSuggestions"
-            type="search"
-            placeholder="Digite: efetivo, comissionado, cronograma, tutorial, legislação..."
-            autocomplete="off"
-          />
-          <datalist id="heroSearchSuggestions">
-            <option value="Servidor efetivo"></option>
-            <option value="Cargo em comissão"></option>
-            <option value="Cronograma"></option>
-            <option value="Orientações"></option>
-            <option value="Tutorial"></option>
-            <option value="Legislação"></option>
-            <option value="FAQ"></option>
-          </datalist>
-          <button class="hero-search-submit" type="submit" aria-label="Pesquisar atalhos no portal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="11" cy="11" r="7"></circle>
-              <path d="m20 20-3.5-3.5"></path>
-            </svg>
-          </button>
-        </form>
+          <form class="hero-search-form" id="heroSearchForm" role="search">
+            <label class="sr-only" for="heroSearchInput">Pesquisar no portal da avaliação</label>
+            <input
+              class="hero-search-input"
+              id="heroSearchInput"
+              name="hero-search"
+              list="heroSearchSuggestions"
+              type="search"
+              placeholder="Digite: efetivo, comissionado, cronograma, tutorial, legislação..."
+              autocomplete="off"
+            />
+            <datalist id="heroSearchSuggestions">
+              <option value="Servidor efetivo"></option>
+              <option value="Cargo em comissão"></option>
+              <option value="Cronograma"></option>
+              <option value="Orientações"></option>
+              <option value="Tutorial"></option>
+              <option value="Legislação"></option>
+              <option value="FAQ"></option>
+            </datalist>
+            <button class="hero-search-submit" type="submit" aria-label="Pesquisar atalhos no portal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-3.5-3.5"></path>
+              </svg>
+            </button>
+          </form>
 
-        <div class="hero-shortcuts">
-          <a href="../efetivo/index.html" class="hero-shortcut" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            Servidor efetivo
-          </a>
-          <a href="../comissionado/index.html" class="hero-shortcut" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-            Cargo em comissão
-          </a>
-          <a href="./tutorial.html" class="hero-shortcut">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <polygon points="6 3 20 12 6 21 6 3"></polygon>
-            </svg>
-            Tutorial
-          </a>
-          <a href="./legislacao.html" class="hero-shortcut">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M12 3v18"></path>
-              <path d="M5 7h14"></path>
-              <path d="M4 21h16"></path>
-            </svg>
-            Legislação
-          </a>
+          <div class="hero-shortcuts">
+            <a href="../efetivo/index.html" class="hero-shortcut" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              Servidor efetivo
+            </a>
+            <a href="../comissionado/index.html" class="hero-shortcut" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              Cargo em comissão
+            </a>
+            <a href="./tutorial.html" class="hero-shortcut">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+              Tutorial
+            </a>
+            <a href="./legislacao.html" class="hero-shortcut">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 3v18"></path>
+                <path d="M5 7h14"></path>
+                <path d="M4 21h16"></path>
+              </svg>
+              Legislação
+            </a>
+          </div>
         </div>
-      </div>
 
-      <!-- Indicador de Scroll (Seta Animada) -->
-      <div class="scroll-indicator">
-        <div class="scroll-arrow"></div>
+        <aside class="hero-panel" aria-label="Resumo do fluxo de avaliação">
+          <p class="hero-panel-kicker">Acesso rápido</p>
+          <h2 class="hero-panel-title">Fluxo essencial da avaliação</h2>
+          <ul class="hero-panel-list">
+            <li class="hero-panel-item">
+              <span class="hero-panel-step">1</span>
+              <div>
+                <strong>Cronograma e prazos</strong>
+                <p>Confira as datas antes de iniciar o preenchimento das avaliações.</p>
+              </div>
+            </li>
+            <li class="hero-panel-item">
+              <span class="hero-panel-step">2</span>
+              <div>
+                <strong>Formulário correto</strong>
+                <p>Acesse a modalidade adequada para servidor efetivo ou cargo em comissão.</p>
+              </div>
+            </li>
+            <li class="hero-panel-item">
+              <span class="hero-panel-step">3</span>
+              <div>
+                <strong>Orientações e legislação</strong>
+                <p>Use o tutorial e a base normativa para evitar dúvidas no processo.</p>
+              </div>
+            </li>
+          </ul>
+          <a class="hero-panel-link" href="#quick-access">Ver atalhos mais acessados</a>
+        </aside>
       </div>
     </section>
 
