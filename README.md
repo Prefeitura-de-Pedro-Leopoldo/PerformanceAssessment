@@ -1,45 +1,44 @@
-# 🏛️ Sistema de Avaliação de Desempenho - Prefeitura de Pedro Leopoldo
+# Sistema de Avaliação de Desempenho
 
-Sistema web completo para gerenciamento de avaliações de desempenho dos servidores municipais de Pedro Leopoldo/MG.
+Projeto web da Prefeitura de Pedro Leopoldo para apoio ao processo de avaliação de desempenho dos servidores.
 
-## 📋 Funcionalidades
+## Estrutura principal
 
-- ✅ Página inicial institucional moderna e responsiva
-- ✅ Formulários de avaliação para servidores efetivos
-- ✅ Formulários de avaliação para cargos em comissão
-- ✅ Sistema de autoavaliação
-- ✅ Cronograma e prazos das avaliações
-- ✅ Design institucional e profissional
-- ✅ Geração de PDFs com as avaliações preenchidas
+O front institucional está centralizado em `src/`.
 
-## 🚀 Início Rápido
-
-Basta abrir o arquivo `index.html` em um navegador web ou hospedar os arquivos em um servidor web.
-
-## 📂 Estrutura do Projeto
-
-```
+```text
 PerformanceAssessment/
-├── index.html              # Página principal
-├── styles.css              # Estilos globais
-├── script.js               # JavaScript frontend
-├── autoavaliacao/          # Sistema de autoavaliação
-├── efetivo/                # Formulário servidor efetivo
-└── comissionado/           # Formulário cargo em comissão
+├── src/
+│   ├── index.html
+│   ├── tutorial.html
+│   ├── legislacao.html
+│   ├── css/
+│   └── js/
+├── efetivo/
+├── comissionado/
+└── autoavaliacao/
 ```
 
-## 🔧 Tecnologias
+## Arquitetura do front institucional
 
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **PDF:** jsPDF para geração de PDFs
+- `src/js/modules/sharedLayout.js`: renderiza elementos compartilhados, como cabeçalho e rodapé.
+- `src/js/data/siteContent.js`: concentra conteúdo editorial da home e da legislação.
+- `src/js/modules/pageContent.js`: renderiza seções orientadas a dados.
+- `src/js/main.js`: inicializa layout, conteúdo e módulos interativos.
+- `src/js/legislacao.js`: controla filtros, pesquisa, modal e download da página de legislação.
 
-## 📱 Responsividade
+## Boas práticas adotadas
 
-O sistema é totalmente responsivo e funciona em:
-- 💻 Desktop
-- 📱 Tablet
-- 📱 Mobile
+- layout compartilhado entre páginas
+- conteúdo centralizado em módulos de dados
+- inicialização modular em JavaScript
+- melhoria de acessibilidade com skip link, `main`, `aria-*` e foco visível
+- menor duplicação de HTML e manutenção mais previsível
 
----
+## Como abrir
 
-**Desenvolvido para a Prefeitura Municipal de Pedro Leopoldo/MG**
+Abra `src/index.html` em um navegador ou sirva a pasta `src/` com um servidor estático.
+
+## Observação
+
+As aplicações `efetivo/`, `comissionado/` e `autoavaliacao/` seguem fluxos próprios e permanecem separadas do front institucional.

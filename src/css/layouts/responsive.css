@@ -1,0 +1,264 @@
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 1180px) {
+  .header-primary .header-container {
+    grid-template-columns: minmax(250px, 300px) minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .nav-link {
+    padding-inline: 0.8rem;
+    font-size: 0.88rem;
+  }
+
+  .brand-wordmark {
+    font-size: 1.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.7rem, 4.5vw, 4.2rem);
+  }
+}
+
+@media (max-width: 960px) {
+  .header-primary .header-container {
+    grid-template-columns: minmax(220px, 1fr) auto;
+  }
+
+  .main-nav {
+    justify-content: flex-end;
+  }
+
+  .mobile-menu-toggle {
+    display: grid;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 86px;
+    right: -100%;
+    width: min(340px, calc(100vw - 1.5rem));
+    height: calc(100vh - 96px);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 1rem;
+    border-radius: 28px 0 0 0;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-lg);
+    overflow-y: auto;
+    transition: right 0.3s ease;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    min-height: auto;
+    padding: 1rem 1.1rem;
+    border-radius: 20px;
+  }
+
+  .nav-link--dropdown-toggle {
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    min-width: 0;
+    margin-top: 0.4rem;
+    padding: 0.35rem;
+    border-radius: 16px;
+    background: rgba(11, 79, 153, 0.04);
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    display: none;
+  }
+
+  .nav-item.dropdown.active .dropdown-menu {
+    display: block;
+    transform: none;
+  }
+
+  .hero-section {
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero-shortcuts {
+    justify-content: center;
+  }
+
+  .quick-access-grid,
+  .orientacao-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+
+  .header-primary .header-container {
+    min-height: 70px;
+  }
+
+  .brand-wordmark {
+    font-size: 1.45rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  .header-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .nav-menu {
+    top: 78px;
+    height: calc(100vh - 88px);
+  }
+
+  .hero-section {
+    min-height: 72vh;
+    padding: 102px 1rem 4rem;
+  }
+
+  .hero-title {
+    max-width: 12ch;
+    font-size: 2.45rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-search-form {
+    min-height: 70px;
+    padding: 0.45rem 0.45rem 0.45rem 1.1rem;
+  }
+
+  .hero-search-input {
+    font-size: 1rem;
+  }
+
+  .hero-search-submit {
+    width: 54px;
+    height: 54px;
+  }
+
+  .quick-access-section,
+  .cronograma-section,
+  .orientacao-section,
+  .faq-section,
+  .tutorial-section {
+    padding: 4rem 1rem;
+  }
+
+  .quick-access-grid,
+  .orientacao-grid,
+  .tutorial-info {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .timeline {
+    padding-left: 1.4rem;
+  }
+
+  .timeline-marker {
+    left: -1.95rem;
+  }
+
+  .timeline-content {
+    padding: 1.2rem 1.25rem;
+  }
+
+  .orientacao-importante,
+  .tutorial-note {
+    flex-direction: column;
+  }
+
+  .faq-question {
+    padding: 1.2rem 1.25rem;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 1.25rem 1.2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-section {
+    min-height: 68vh;
+    padding: 98px 0.85rem 3.5rem;
+  }
+
+  .hero-title {
+    max-width: 11ch;
+    font-size: 2rem;
+  }
+
+  .hero-kicker {
+    padding-inline: 0.8rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-shortcuts {
+    gap: 0.6rem;
+  }
+
+  .hero-shortcut {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-search-form {
+    min-height: 66px;
+    padding-left: 1rem;
+  }
+
+  .hero-search-submit {
+    width: 52px;
+    height: 52px;
+  }
+
+  .quick-access-card {
+    min-height: 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+}

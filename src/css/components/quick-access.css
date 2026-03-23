@@ -1,0 +1,110 @@
+/* ============================================
+   MAIS ACESSADOS - Portal Cards
+   ============================================ */
+
+.quick-access-section {
+  padding: 4.5rem 2rem 2rem;
+  background: linear-gradient(180deg, rgba(232, 238, 243, 0.92) 0%, rgba(243, 246, 249, 0.88) 100%);
+}
+
+.quick-access-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+
+.quick-access-card {
+  min-height: 210px;
+  padding: 1.7rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.1rem;
+  background: linear-gradient(180deg, var(--white) 0%, #f9fbfd 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(11, 79, 153, 0.08);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.quick-access-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 44px rgba(21, 49, 79, 0.15);
+}
+
+.quick-access-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.quick-access-icon {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: rgba(44, 134, 209, 0.1);
+  color: var(--primary-blue);
+}
+
+.quick-access-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.quick-access-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 0.55rem;
+  border-radius: 999px;
+  background: rgba(11, 79, 153, 0.08);
+  color: var(--primary-blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.quick-access-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.quick-access-title {
+  color: var(--primary-blue-dark);
+  font-size: 1.26rem;
+  line-height: 1.2;
+}
+
+.quick-access-description {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.quick-access-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.quick-access-link svg {
+  width: 16px;
+  height: 16px;
+}

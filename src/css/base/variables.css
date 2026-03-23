@@ -1,0 +1,36 @@
+/* ============================================
+   VARIÁVEIS CSS - Sistema de Design
+   ============================================ */
+
+:root {
+    /* Cores Principais */
+    --primary-blue: #0b4f99;
+    --primary-blue-dark: #08386c;
+    --secondary-blue: #2c86d1;
+    --accent-gold: #f3b523;
+    --accent-green: #2a9d69;
+    --accent-red: #c93332;
+    --accent-yellow: #f0cf20;
+
+    /* Cores de Texto */
+    --text-dark: #15314f;
+    --text-light: #5d7187;
+    --text-muted: #74879d;
+
+    /* Cores Neutras */
+    --white: #ffffff;
+    --gray-light: #f3f6f9;
+    --gray-medium: #d9e1e8;
+    --gray-strong: #c5d1dc;
+    --surface-page: #e8eef3;
+    --surface-soft: #f7fafc;
+    --surface-panel: rgba(255, 255, 255, 0.94);
+    --overlay-dark: rgba(5, 36, 74, 0.66);
+
+    /* Efeitos e Transições */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 8px 20px rgba(21, 49, 79, 0.08);
+    --shadow-md: 0 18px 40px rgba(21, 49, 79, 0.12);
+    --shadow-lg: 0 24px 60px rgba(21, 49, 79, 0.16);
+    --container-width: 1180px;
+}

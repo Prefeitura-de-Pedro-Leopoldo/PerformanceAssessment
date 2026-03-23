@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+  <!-- ========================================
+       HEAD - Metadados e Recursos Externos
+       ======================================== -->
+  <head>
+    <!-- Meta Tags Essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Legislação sobre Avaliação de Desempenho - Prefeitura Municipal de Pedro Leopoldo" />
+
+    <!-- Título da Página -->
+    <title>Legislação - Avaliação de Desempenho | Prefeitura de Pedro Leopoldo</title>
+
+    <!-- Pré-conexão com Google Fonts para Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importação de Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Estilos CSS Modulares -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components/legislacao.css" />
+  </head>
+
+  <body data-page="legislacao">
+    <!-- ========================================
+         HEADER - Cabeçalho e Navegação Principal
+         ======================================== -->
+    <div id="shared-header"></div>
+
+    <main id="main-content" tabindex="-1">
+
+    <!-- ========================================
+         HERO SECTION - Cabeçalho da Página
+         ======================================== -->
+    <section class="hero-section-legislacao">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Legislação</h1>
+        <p class="hero-subtitle">Base legal e normativas sobre Avaliação de Desempenho</p>
+      </div>
+    </section>
+
+    <!-- ========================================
+         LEGISLAÇÃO - Documentos e Normativas
+         ======================================== -->
+    <section class="legislacao-section" id="legislacao">
+      <div class="legislacao-container">
+        <!-- Título e Subtítulo da Seção -->
+        <h2 class="section-title">Documentos Legais</h2>
+        <p class="section-subtitle">Leis, decretos e normativas que regulamentam a avaliação de desempenho</p>
+
+        <!-- Filtros de Categoria -->
+        <div class="legislacao-filters">
+          <button class="filter-btn active" type="button" data-filter="todos" aria-pressed="true">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="9" x2="15" y2="9"></line>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+            Todos os Documentos
+          </button>
+          <button class="filter-btn" type="button" data-filter="leis" aria-pressed="false">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            Leis
+          </button>
+          <button class="filter-btn" type="button" data-filter="decretos" aria-pressed="false">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            Decretos
+          </button>
+          <button class="filter-btn" type="button" data-filter="portarias" aria-pressed="false">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <circle cx="12" cy="13" r="2"></circle>
+            </svg>
+            Portarias
+          </button>
+          <button class="filter-btn" type="button" data-filter="outros" aria-pressed="false">
+            <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+            Outros
+          </button>
+        </div>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Pesquisar por nome, número ou palavra-chave..."
+            aria-label="Pesquisar legislação"
+          />
+        </div>
+
+        <!-- Grid de Documentos -->
+        <div class="documentos-grid" id="documentosGrid"></div>
+
+        <!-- Informação Importante -->
+        <div class="legislacao-importante">
+          <div class="importante-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <div class="importante-content">
+            <h4 class="importante-title">Importante</h4>
+            <p class="importante-description">
+              Todos os documentos disponibilizados nesta seção são oficiais e estão em conformidade com a legislação vigente. Em caso de dúvidas sobre a
+              interpretação ou aplicação das normas, entre em contato com a DIRGEP.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de Visualização de PDF -->
+    <div class="modal-overlay" id="pdfModal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle">Visualizar Documento</h3>
+          <button class="modal-close" id="closeModal" type="button" aria-label="Fechar modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe id="pdfViewer" class="pdf-viewer" frameborder="0" title="Visualização do documento"></iframe>
+        </div>
+      </div>
+    </div>
+
+    </main>
+
+    <!-- ========================================
+         FOOTER - Rodapé com Copyright
+         ======================================== -->
+    <div id="shared-footer"></div>
+
+    <!-- ========================================
+         JAVASCRIPT - Scripts de Interatividade
+         ======================================== -->
+    <!-- Script principal com módulos ES6 -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR">
+  <!-- ========================================
+       HEAD - Metadados e Recursos Externos
+       Create: Lucelho Silva
+       Date: 2025-12-01
+       ======================================== -->
+  <head>
+    <!-- Meta Tags Essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Prefeitura Municipal de Pedro Leopoldo - Poder Executivo Municipal" />
+
+    <!-- Título da Página -->
+    <title>Prefeitura de Pedro Leopoldo - Poder Executivo Municipal</title>
+
+    <!-- Pré-conexão com Google Fonts para Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importação de Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Estilos CSS Modulares -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body data-page="home">
+    <!-- ========================================
+         HEADER - Cabeçalho e Navegação Principal
+         ======================================== -->
+    <div id="shared-header"></div>
+
+    <main id="main-content" tabindex="-1">
+
+    <!-- ========================================
+         HERO SECTION - Seção Principal de Destaque
+         ======================================== -->
+    <section class="hero-section">
+      <!-- Overlay Escuro sobre a Imagem de Fundo -->
+      <div class="hero-overlay"></div>
+
+      <!-- Conteúdo Principal do Hero -->
+      <div class="hero-content">
+        <p class="hero-kicker">Avaliação de desempenho 2026</p>
+        <h1 class="hero-title">Encontre rapidamente tudo o que precisa para conduzir a avaliação</h1>
+        <p class="hero-subtitle">
+          Acesse formulários, tutorial, cronograma e legislação em um portal mais direto, claro e útil para o dia a dia da chefia imediata.
+        </p>
+
+        <form class="hero-search-form" id="heroSearchForm" role="search">
+          <label class="sr-only" for="heroSearchInput">Pesquisar no portal da avaliação</label>
+          <input
+            class="hero-search-input"
+            id="heroSearchInput"
+            name="hero-search"
+            list="heroSearchSuggestions"
+            type="search"
+            placeholder="Digite: efetivo, comissionado, cronograma, tutorial, legislação..."
+            autocomplete="off"
+          />
+          <datalist id="heroSearchSuggestions">
+            <option value="Servidor efetivo"></option>
+            <option value="Cargo em comissão"></option>
+            <option value="Cronograma"></option>
+            <option value="Orientações"></option>
+            <option value="Tutorial"></option>
+            <option value="Legislação"></option>
+            <option value="FAQ"></option>
+          </datalist>
+          <button class="hero-search-submit" type="submit" aria-label="Pesquisar atalhos no portal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-3.5-3.5"></path>
+            </svg>
+          </button>
+        </form>
+
+        <div class="hero-shortcuts">
+          <a href="../efetivo/index.html" class="hero-shortcut" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Servidor efetivo
+          </a>
+          <a href="../comissionado/index.html" class="hero-shortcut" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Cargo em comissão
+          </a>
+          <a href="./tutorial.html" class="hero-shortcut">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polygon points="6 3 20 12 6 21 6 3"></polygon>
+            </svg>
+            Tutorial
+          </a>
+          <a href="./legislacao.html" class="hero-shortcut">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 3v18"></path>
+              <path d="M5 7h14"></path>
+              <path d="M4 21h16"></path>
+            </svg>
+            Legislação
+          </a>
+        </div>
+      </div>
+
+      <!-- Indicador de Scroll (Seta Animada) -->
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <section class="quick-access-section" id="quick-access">
+      <div class="quick-access-container">
+        <h2 class="section-title">Mais acessados</h2>
+        <p class="section-subtitle">Atalhos diretos para os serviços e conteúdos mais utilizados no processo avaliativo.</p>
+        <div class="quick-access-grid" id="quickAccessGrid"></div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CRONOGRAMA - Linha do Tempo de Prazos
+         ======================================== -->
+    <section class="cronograma-section" id="cronograma">
+      <div class="cronograma-container">
+        <!-- Título e Subtítulo da Seção -->
+        <h2 class="section-title">Cronograma e Prazos - Período avaliativo de 01/01/2025 até 31/12/2025</h2>
+        <p class="section-subtitle">Confira os prazos importantes para o processo de avaliação de desempenho 2025</p>
+
+        <!-- Timeline com os Eventos -->
+        <div class="timeline">
+          <!-- Evento 1: Avaliação dos Servidores -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">03/12/2025 - 19/12/2025</div>
+              <h3 class="timeline-title">Avaliação dos servidores</h3>
+              <p class="timeline-description">Período destinado ao preenchimento dos formulários de avaliação pela chefia imediata.</p>
+            </div>
+          </div>
+
+          <!-- Evento 2: Pedido de Reconsideração -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">5 dias corridos após a realização da avaliação</div>
+              <h3 class="timeline-title">Pedido de reconsideração do resultado à chefia imediata</h3>
+              <p class="timeline-description">
+                Período destinado à solicitação de reconsideração pelo servidor diretamente à chefia imediata que realizou a avaliação.
+              </p>
+            </div>
+          </div>
+
+          <!-- Evento 3: Recurso à Comissão Recursal -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">5 dias após notificação do resultado do pedido de reconsideração</div>
+              <h3 class="timeline-title">Interposição de recurso à Comissão Recursal</h3>
+              <p class="timeline-description">
+                Período reservado para o servidor interpor recurso formal junto à Comissão Recursal de Avaliação de Desempenho.
+              </p>
+            </div>
+          </div>
+
+          <!-- Evento 4: Análise da Comissão -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">15 dias corridos após recebimento do recurso</div>
+              <h3 class="timeline-title">Análise e notificação do Recurso pela Comissão</h3>
+              <p class="timeline-description">
+                Período em que a Comissão Recursal analisará os recursos interpostos e notificará os servidores sobre as decisões tomadas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Evento 5: Homologação -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Após conclusão de todas as etapas</div>
+              <h3 class="timeline-title">Homologação das avaliações</h3>
+              <p class="timeline-description">Prazo previsto para a homologação final das avaliações de desempenho pela DIRGEP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         ORIENTAÇÕES - Guia Passo a Passo
+         ======================================== -->
+    <section class="orientacao-section" id="orientacao">
+      <div class="orientacao-container">
+        <!-- Título e Subtítulo da Seção -->
+        <h2 class="section-title">Orientações para Avaliação</h2>
+        <p class="section-subtitle">Guia passo a passo para realizar a avaliação de desempenho</p>
+
+        <!-- Grid com os Cards de Orientação -->
+        <div class="orientacao-grid" id="orientacaoGrid"></div>
+
+        <!-- Alerta Importante -->
+        <div class="orientacao-importante" id="orientacaoImportante"></div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FAQ - Perguntas Frequentes (Accordion)
+         ======================================== -->
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <!-- Título e Subtítulo da Seção -->
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">Respostas para as dúvidas mais comuns sobre o processo de avaliação</p>
+
+        <!-- Lista de Perguntas e Respostas (Accordion) -->
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
+    </main>
+
+    <!-- ========================================
+         FOOTER - Rodapé com Copyright
+         ======================================== -->
+    <div id="shared-footer"></div>
+
+    <!-- ========================================
+         JAVASCRIPT - Scripts de Interatividade Modulares
+         ======================================== -->
+    <!-- Script principal com módulos ES6 -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
