@@ -9,73 +9,127 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="./src/assets/css/main.css" />
   </head>
-  <body>
-    <div class="loading" id="loading">
+  <body class="app-page app-page--comissionado">
+    <div class="loading" id="loading" aria-hidden="true">
       <div class="loading-content">
         <div class="spinner"></div>
         <p>Gerando PDF...</p>
       </div>
     </div>
 
-    <main class="container" id="formulario-container">
-      <h1><img src="./src/assets/img/brasao.png" alt="Uma descrição da imagem" width="70px" /> PREFEITURA MUNICIPAL DE PEDRO LEOPOLDO</h1>
-      <h2>ANEXO 2 TERMO DE AVALIAÇÃO DE DESEMPENHO (SERVIDOR EM EXERCÍCO DE CARGO EM COMISSÃO)</h2>
+    <div class="page-shell">
+      <div class="page-rail" aria-hidden="true">
+        <span class="page-rail__segment rail-blue"></span>
+        <span class="page-rail__segment rail-cyan"></span>
+        <span class="page-rail__segment rail-green"></span>
+        <span class="page-rail__segment rail-red"></span>
+        <span class="page-rail__segment rail-yellow"></span>
+      </div>
 
-      <div class="secao">
-        <h3>I. IDENTIFICAÇÃO DO SERVIDOR</h3>
+      <a class="portal-link" href="../src/index.html">Voltar ao portal da avaliação</a>
+
+      <section class="page-hero" aria-label="Introdução da avaliação de cargo em comissão">
+        <div class="page-hero__copy">
+          <p class="page-kicker">Portal da avaliação de desempenho</p>
+          <h2 class="page-title">Avaliação de cargo em comissão</h2>
+        </div>
+
+        <aside class="page-panel" aria-label="Orientações rápidas">
+          <p class="page-panel__kicker">Antes de iniciar</p>
+          <h2 class="page-panel__title">Fluxo recomendado</h2>
+          <ul class="page-panel__list">
+            <li>
+              <span class="page-panel__badge">1</span>
+              <div>
+                <strong>Confirme dados e datas</strong>
+                <p>Revise identificação do servidor e período avaliativo antes de registrar qualquer pontuação.</p>
+              </div>
+            </li>
+            <li>
+              <span class="page-panel__badge">2</span>
+              <div>
+                <strong>Documente evidências</strong>
+                <p>Use o campo comentado e as tabelas de apoio para registrar contexto, dificultadores e ações de desenvolvimento.</p>
+              </div>
+            </li>
+            <li>
+              <span class="page-panel__badge">3</span>
+              <div>
+                <strong>Finalize com assinatura</strong>
+                <p>Revise o resultado final, preencha as datas das assinaturas e exporte o documento em PDF.</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <main class="container" id="formulario-container">
+        <header>
+          <p class="form-header__eyebrow">Formulário oficial da Prefeitura Municipal de Pedro Leopoldo</p>
+          <h1>
+            <img src="./src/assets/img/brasao.png" alt="Brasão da Prefeitura Municipal de Pedro Leopoldo" width="74" height="74" />
+            PREFEITURA MUNICIPAL DE PEDRO LEOPOLDO
+          </h1>
+          <h2>ANEXO 2 TERMO DE AVALIAÇÃO DE DESEMPENHO (SERVIDOR EM EXERCÍCIO DE CARGO EM COMISSÃO)</h2>
+        </header>
+
+      <section class="secao">
+        <h3>I. Identificação do servidor</h3>
         <div class="campo-grupo">
-          <div class="campo">
-            <label>Nome:</label>
+          <div class="campo campo-longo">
+            <label for="nome">Nome</label>
             <input type="text" id="nome" />
           </div>
-          <div class="campo" style="flex: 0.3">
-            <label>Matrícula:</label>
+          <div class="campo campo-pequeno">
+            <label for="matricula">Matrícula</label>
             <input type="text" id="matricula" />
           </div>
         </div>
         <div class="campo-grupo">
           <div class="campo">
-            <label>Cargo:</label>
+            <label for="cargo">Cargo</label>
             <input type="text" id="cargo" />
           </div>
         </div>
         <div class="campo-grupo">
           <div class="campo">
-            <label>Órgão:</label>
+            <label for="orgao">Órgão</label>
             <input type="text" id="orgao" />
           </div>
         </div>
         <div class="campo-grupo">
           <div class="campo">
-            <label>Unidade:</label>
+            <label for="unidade">Unidade</label>
             <input type="text" id="unidade" />
           </div>
         </div>
         <div class="campo-grupo">
-          <div class="campo">
-            <label>Período Avaliativo:</label>
-            <input type="date" id="periodo_inicio" value="2024-11-30" readonly />
-            <span style="margin: 0 10px">a</span>
-            <input type="date" id="periodo_fim" value="2025-11-30" readonly />
+          <div class="campo campo-longo campo-periodo">
+            <label for="periodo_inicio">Período avaliativo</label>
+            <div class="campo-periodo__inputs">
+              <input type="date" id="periodo_inicio" value="2024-11-30" readonly />
+              <span class="separador">a</span>
+              <input type="date" id="periodo_fim" value="2025-11-30" readonly />
+            </div>
           </div>
-          <div class="campo" style="flex: 0.4">
-            <label>Data da Avaliação:</label>
+          <div class="campo campo-medio">
+            <label for="data_avaliacao">Data da avaliação</label>
             <input type="date" id="data_avaliacao" />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="secao">
-        <h3>II. INSTRUÇÕES</h3>
+      <section class="secao">
+        <h3>II. Instruções</h3>
         <div class="instrucoes">
           <p>2.1 O Termo de Avaliação deverá ser preenchido pela chefia imediata na presença do servidor.</p>
           <p>2.2 Para cada comportamento deverão ser avaliados três critérios e atribuída uma pontuação (1-5).</p>
           <p>2.3 O Termo de Avaliação preenchido deve ser datado e assinado pelo avaliador e pelo servidor.</p>
         </div>
-      </div>
+      </section>
 
-      <div class="secao">
-        <h3>III. ESCALA DE AVALIAÇÃO (DO RESULTADO FINAL)</h3>
+      <section class="secao">
+        <h3>III. Escala de avaliação (do resultado final)</h3>
         <div class="escala">
           <p><strong>1 – Excelente (90% a 100%):</strong> Supera as expectativas, com alto nível de qualidade.</p>
           <p><strong>2 – Muito bom (80% a 89%):</strong> Atende bem às expectativas, com poucos ajustes necessários.</p>
@@ -83,38 +137,38 @@
           <p><strong>4 – Regular (60% a 69%):</strong> Atende parcialmente, mas com falhas ou limitações.</p>
           <p><strong>5 – Insatisfatório (abaixo de 60%):</strong> Muito abaixo do esperado, não atende aos requisitos.</p>
         </div>
-      </div>
+      </section>
 
-      <div class="secao">
-        <h3>IV. AVALIAÇÃO DO SERVIDOR</h3>
+      <section class="secao">
+        <h3>IV. Avaliação do servidor</h3>
 
         <div id="comportamentos-container">
           <!-- Os comportamentos serão inseridos aqui via JavaScript -->
         </div>
 
         <div class="resultado-final">
-          <h2>RESULTADO FINAL</h2>
+          <h2>Resultado final</h2>
           <div>
             <div class="resultado-linha">
-              <span>Total Geral (Máx: 100 pts):</span>
+              <span>Total geral (máx: 100 pts)</span>
               <span class="resultado-valor" id="total-geral">0.0</span>
             </div>
             <div class="resultado-linha">
-              <span>Percentual:</span>
+              <span>Percentual</span>
               <span class="resultado-valor" id="percentual">0.0%</span>
             </div>
             <div class="resultado-linha">
-              <span>Avaliação:</span>
+              <span>Avaliação</span>
               <span class="resultado-valor" id="indice">–</span>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <section class="secao">
-        <h3>RESULTADOS COMENTADOS</h3>
+        <h3>Resultados comentados</h3>
         <div class="comentarios">
-          <label for="comentarios">Evidências - relatos de situações no período avaliado:</label>
+          <label for="comentarios">Evidências - relatos de situações no período avaliado</label>
           <textarea id="comentarios" name="comentarios" rows="4" aria-label="Campo para comentários sobre evidências"></textarea>
         </div>
       </section>
@@ -122,9 +176,7 @@
       <!-- Dificultadores da performance -->
       <section class="secao">
         <h3>Dificultadores da performance no período avaliado</h3>
-        <p style="margin-bottom: 10px; font-size: 10pt">
-          Assinale os dificultadores que precisam de atenção, conforme contexto em que o servidor está inserido.
-        </p>
+        <p class="secao-apoio">Assinale os dificultadores que precisam de atenção, conforme contexto em que o servidor está inserido.</p>
 
         <table>
           <thead>
@@ -235,7 +287,7 @@
       <!-- Plano de Desenvolvimento Individual -->
       <section class="secao">
         <h3>Plano de Desenvolvimento Individual</h3>
-        <p style="margin-bottom: 10px; font-size: 10pt">Ações e Estratégias para Desenvolvimento</p>
+        <p class="secao-apoio">Ações e estratégias para desenvolvimento.</p>
 
         <table>
           <thead>
@@ -249,73 +301,66 @@
           <tbody>
             <tr>
               <th scope="row" style="text-align: center">1</th>
-              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 1" /></td>
+              <td><textarea class="table-textarea" aria-label="Ação de desenvolvimento 1"></textarea></td>
               <td><input type="text" style="width: 100%" aria-label="Prazo para ação 1" /></td>
               <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 1" /></td>
             </tr>
             <tr>
               <th scope="row" style="text-align: center">2</th>
-              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 2" /></td>
+              <td><textarea class="table-textarea" aria-label="Ação de desenvolvimento 2"></textarea></td>
               <td><input type="text" style="width: 100%" aria-label="Prazo para ação 2" /></td>
               <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 2" /></td>
             </tr>
             <tr>
               <th scope="row" style="text-align: center">3</th>
-              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 3" /></td>
+              <td><textarea class="table-textarea" aria-label="Ação de desenvolvimento 3"></textarea></td>
               <td><input type="text" style="width: 100%" aria-label="Prazo para ação 3" /></td>
               <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 3" /></td>
             </tr>
             <tr>
               <th scope="row" style="text-align: center">4</th>
-              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 4" /></td>
+              <td><textarea class="table-textarea" aria-label="Ação de desenvolvimento 4"></textarea></td>
               <td><input type="text" style="width: 100%" aria-label="Prazo para ação 4" /></td>
               <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 4" /></td>
             </tr>
             <tr>
               <th scope="row" style="text-align: center">5</th>
-              <td><input type="text" style="width: 100%" aria-label="Ação de desenvolvimento 5" /></td>
+              <td><textarea class="table-textarea" aria-label="Ação de desenvolvimento 5"></textarea></td>
               <td><input type="text" style="width: 100%" aria-label="Prazo para ação 5" /></td>
               <td><input type="text" style="width: 100%" aria-label="Recurso necessário para ação 5" /></td>
             </tr>
           </tbody>
         </table>
 
-        <label for="comentarios-adicionais" style="margin-top: 15px; margin-bottom: 5px; font-size: 10pt; display: block"
-          >Se desejar, insira outros comentários ou sugestões:</label
-        >
-        <textarea id="comentarios-adicionais" style="width: 100%; min-height: 50px" aria-label="Comentários ou sugestões adicionais"></textarea>
+        <label for="comentarios-adicionais" class="secao-apoio">Se desejar, insira outros comentários ou sugestões.</label>
+        <textarea id="comentarios-adicionais" class="textarea-curta" aria-label="Comentários ou sugestões adicionais"></textarea>
       </section>
 
-      <section class="assinaturas">
+      <section class="assinaturas assinaturas--duplas">
         <div class="assinatura">
           <div class="assinatura-linha" role="presentation"></div>
-          <p>Assinatura do Avaliador</p>
-          <p>
-            Data:
-            <input
-              type="date"
-              id="data_assinatura_avaliador"
-              name="data_assinatura_avaliador"
-              style="width: 120px"
-              aria-label="Data da assinatura do avaliador"
-            />
-          </p>
+          <p>Assinatura do avaliador</p>
+          <div class="campo">
+            <label for="data_assinatura_avaliador">Data</label>
+            <input type="date" id="data_assinatura_avaliador" name="data_assinatura_avaliador" aria-label="Data da assinatura do avaliador" />
+          </div>
         </div>
         <div class="assinatura">
           <div class="assinatura-linha" role="presentation"></div>
-          <p>Assinatura do Servidor</p>
-          <p>
-            Data:
-            <input type="date" id="data_assinatura_servidor" name="data_assinatura_servidor" style="width: 120px" aria-label="Data da assinatura do servidor" />
-          </p>
+          <p>Assinatura do servidor</p>
+          <div class="campo">
+            <label for="data_assinatura_servidor">Data</label>
+            <input type="date" id="data_assinatura_servidor" name="data_assinatura_servidor" aria-label="Data da assinatura do servidor" />
+          </div>
         </div>
       </section>
 
-      <nav class="botoes-acao">
-        <button class="btn btn-primary" onclick="baixarPDF()">📄 BAIXAR PDF</button>
-        <button class="btn btn-secondary" onclick="novaAvaliacao()">🔄 NOVA AVALIAÇÃO</button>
+      <nav class="botoes-acao" aria-label="Ações do formulário">
+        <button class="btn btn-primary" onclick="baixarPDF()">Baixar PDF</button>
+        <button class="btn btn-secondary" onclick="novaAvaliacao()">Nova avaliação</button>
       </nav>
-    </main>
+      </main>
+    </div>
     <script type="module" src="./src/assets/js/main.js"></script>
   </body>
 </html>

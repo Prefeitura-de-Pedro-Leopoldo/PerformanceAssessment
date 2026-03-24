@@ -11,7 +11,7 @@
     <!-- Estilos - Vite vai processar automaticamente -->
     <link rel="stylesheet" href="./src/assets/css/main.css" />
   </head>
-  <body>
+  <body class="app-page app-page--autoavaliacao">
     <!-- Loading overlay -->
     <div class="loading" id="loading" aria-hidden="true">
       <div class="loading-content">
@@ -20,136 +20,202 @@
       </div>
     </div>
 
-    <!-- Container principal do formulário -->
-    <div class="container" id="formulario-container">
-      <!-- Cabeçalho -->
-      <header>
-        <h1>
-          <img src="./src/assets/img/brasao.png" alt="Brasão da Prefeitura" width="90" />
-          PREFEITURA MUNICIPAL DE PEDRO LEOPOLDO
-        </h1>
-        <h2>
-          AUTOAVALIAÇÃO DE DESEMPENHO (SERVIDOR EFETIVO)<br />
-          EXERCÍCIO 2024
-        </h2>
-      </header>
-
-      <!-- Seção 1: Identificação -->
-      <section class="secao">
-        <h3>1. IDENTIFICAÇÃO DO SERVIDOR</h3>
-
-        <div class="campo-grupo">
-          <div class="campo">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" />
-          </div>
-          <div class="campo campo-pequeno">
-            <label for="matricula">Matrícula Nº:</label>
-            <input type="text" id="matricula" name="matricula" />
-          </div>
-        </div>
-
-        <div class="campo-grupo">
-          <div class="campo">
-            <label for="cargo">Cargo:</label>
-            <input type="text" id="cargo" name="cargo" />
-          </div>
-        </div>
-
-        <div class="campo-grupo">
-          <div class="campo">
-            <label for="orgao">Órgão:</label>
-            <input type="text" id="orgao" name="orgao" />
-          </div>
-        </div>
-
-        <div class="campo-grupo">
-          <div class="campo">
-            <label for="unidade">Unidade:</label>
-            <input type="text" id="unidade" name="unidade" />
-          </div>
-        </div>
-
-        <div class="campo-grupo">
-          <div class="campo">
-            <label for="periodo_inicio">Período Avaliativo:</label>
-            <input type="date" id="periodo_inicio" name="periodo_inicio" />
-            <span class="separador">a</span>
-            <input type="date" id="periodo_fim" name="periodo_fim" />
-          </div>
-          <div class="campo campo-medio">
-            <label for="data_avaliacao">Data da Avaliação:</label>
-            <input type="date" id="data_avaliacao" name="data_avaliacao" />
-          </div>
-        </div>
-      </section>
-
-      <!-- Seção 2: Instruções -->
-      <section class="secao">
-        <h3>2. INSTRUÇÕES</h3>
-        <div class="instrucoes">
-          <p>2.1 A Autoavaliação deverá ser preenchida pelo servidor.</p>
-          <p>2.2 Para cada comportamento deverá ser avaliado três critérios e atribuído uma pontuação, observada a escala de avaliação descrita abaixo.</p>
-          <p>2.3 A Autoavaliação preenchida deve ser datada e assinada pelo servidor e deverá receber a ciência da chefia atual.</p>
-        </div>
-      </section>
-
-      <!-- Seção 3: Escala de Avaliação -->
-      <section class="secao">
-        <h3>3. ESCALA DE AVALIAÇÃO</h3>
-        <div class="escala">
-          <p><strong>1 - Excelente (90% a 100%):</strong> supera as expectativas, com alto nível de qualidade.</p>
-          <p><strong>2 - Muito bom (80% a 89%):</strong> atende bem às expectativas, com poucos ajustes necessários.</p>
-          <p><strong>3 - Satisfatório (70% a 79%):</strong> cumpre os requisitos básicos, mas pode ser aprimorado.</p>
-          <p><strong>4 - Regular (60% a 69%):</strong> atende parcialmente, mas com falhas ou limitações.</p>
-          <p><strong>5 - Insatisfatório (abaixo de 60%):</strong> muito abaixo do esperado, não atende aos requisitos.</p>
-        </div>
-      </section>
-
-      <!-- Seção 4: Avaliação -->
-      <section class="secao">
-        <h3>4. AVALIAÇÃO DO SERVIDOR</h3>
-
-        <!-- Container onde os comportamentos serão inseridos via JavaScript -->
-        <div id="comportamentos-container"></div>
-
-        <!-- Resultado Final -->
-        <div class="resultado-final">
-          <h2>RESULTADO FINAL</h2>
-          <div class="resultado-conteudo">
-            <div class="resultado-linha">
-              <span>Total Geral (Máx: 100 pts):</span>
-              <span class="resultado-valor" id="total-geral">0.0</span>
-            </div>
-            <div class="resultado-linha">
-              <span>Percentual:</span>
-              <span class="resultado-valor" id="percentual">0.0%</span>
-            </div>
-            <div class="resultado-linha">
-              <span>Avaliação:</span>
-              <span class="resultado-valor" id="indice">-</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Assinaturas -->
-      <section class="assinaturas">
-        <p>
-          Local: <input type="text" id="local" name="local" class="input-local" /> Data:
-          <input type="date" id="data_assinatura" name="data_assinatura" class="input-data-assinatura" />
-        </p>
-        <br>
-        <p>Assinatura do servidor: </span></p>
-        <br>
-        <p>Ciência da chefia atual: </span></p>
-      </section>
-
-      <!-- Botões de Ação -->
-      <div class="botoes-acao">
-        <button type="button" class="btn btn-primary" onclick="baixarPDF()" aria-label="Baixar PDF">📄 BAIXAR PDF</button>
-        <button type="button" class="btn btn-secondary" onclick="novaAvaliacao()" aria-label="Nova Avaliação">🔄 NOVA AVALIAÇÃO</button>
+    <div class="page-shell">
+      <div class="page-rail" aria-hidden="true">
+        <span class="page-rail__segment rail-blue"></span>
+        <span class="page-rail__segment rail-cyan"></span>
+        <span class="page-rail__segment rail-green"></span>
+        <span class="page-rail__segment rail-red"></span>
+        <span class="page-rail__segment rail-yellow"></span>
       </div>
+
+      <a class="portal-link" href="../src/index.html">Voltar ao portal da avaliação</a>
+
+      <section class="page-hero" aria-label="Introdução da autoavaliação">
+        <div class="page-hero__copy">
+          <p class="page-kicker">Portal da avaliação de desempenho</p>
+          <h2 class="page-title">Autoavaliação</h2>
+        </div>
+
+        <aside class="page-panel" aria-label="Orientações rápidas">
+          <p class="page-panel__kicker">Antes de iniciar</p>
+          <h2 class="page-panel__title">Fluxo recomendado</h2>
+          <ul class="page-panel__list">
+            <li>
+              <span class="page-panel__badge">1</span>
+              <div>
+                <strong>Revise a identificação</strong>
+                <p>Confira nome, matrícula, cargo, unidade e período avaliativo antes de preencher as notas.</p>
+              </div>
+            </li>
+            <li>
+              <span class="page-panel__badge">2</span>
+              <div>
+                <strong>Atribua notas com critério</strong>
+                <p>Use a escala de avaliação como referência para manter coerência entre os comportamentos avaliados.</p>
+              </div>
+            </li>
+            <li>
+              <span class="page-panel__badge">3</span>
+              <div>
+                <strong>Finalize e exporte</strong>
+                <p>Revise o resultado final, preencha local e data e então gere o PDF oficial do formulário.</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- Container principal do formulário -->
+      <main class="container" id="formulario-container">
+        <!-- Cabeçalho -->
+        <header>
+          <p class="form-header__eyebrow">Formulário oficial da Prefeitura Municipal de Pedro Leopoldo</p>
+          <h1>
+            <img src="./src/assets/img/brasao.png" alt="Brasão da Prefeitura Municipal de Pedro Leopoldo" width="74" height="74" />
+            PREFEITURA MUNICIPAL DE PEDRO LEOPOLDO
+          </h1>
+          <h2>
+            AUTOAVALIAÇÃO DE DESEMPENHO (SERVIDOR EFETIVO)<br />
+            EXERCÍCIO 2024
+          </h2>
+        </header>
+
+        <!-- Seção 1: Identificação -->
+        <section class="secao">
+          <h3>1. Identificação do servidor</h3>
+
+          <div class="campo-grupo">
+            <div class="campo campo-longo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" />
+            </div>
+            <div class="campo campo-pequeno">
+              <label for="matricula">Matrícula nº</label>
+              <input type="text" id="matricula" name="matricula" />
+            </div>
+          </div>
+
+          <div class="campo-grupo">
+            <div class="campo">
+              <label for="cargo">Cargo</label>
+              <input type="text" id="cargo" name="cargo" />
+            </div>
+          </div>
+
+          <div class="campo-grupo">
+            <div class="campo">
+              <label for="orgao">Órgão</label>
+              <input type="text" id="orgao" name="orgao" />
+            </div>
+          </div>
+
+          <div class="campo-grupo">
+            <div class="campo">
+              <label for="unidade">Unidade</label>
+              <input type="text" id="unidade" name="unidade" />
+            </div>
+          </div>
+
+          <div class="campo-grupo">
+            <div class="campo campo-longo campo-periodo">
+              <label for="periodo_inicio">Período avaliativo</label>
+              <div class="campo-periodo__inputs">
+                <input type="date" id="periodo_inicio" name="periodo_inicio" />
+                <span class="separador">a</span>
+                <input type="date" id="periodo_fim" name="periodo_fim" />
+              </div>
+            </div>
+            <div class="campo campo-medio">
+              <label for="data_avaliacao">Data da avaliação</label>
+              <input type="date" id="data_avaliacao" name="data_avaliacao" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 2: Instruções -->
+        <section class="secao">
+          <h3>2. Instruções</h3>
+          <div class="instrucoes">
+            <p>2.1 A Autoavaliação deverá ser preenchida pelo servidor.</p>
+            <p>2.2 Para cada comportamento deverá ser avaliado três critérios e atribuído uma pontuação, observada a escala de avaliação descrita abaixo.</p>
+            <p>2.3 A Autoavaliação preenchida deve ser datada e assinada pelo servidor e deverá receber a ciência da chefia atual.</p>
+          </div>
+        </section>
+
+        <!-- Seção 3: Escala de Avaliação -->
+        <section class="secao">
+          <h3>3. Escala de avaliação</h3>
+          <div class="escala">
+            <p><strong>1 - Excelente (90% a 100%):</strong> supera as expectativas, com alto nível de qualidade.</p>
+            <p><strong>2 - Muito bom (80% a 89%):</strong> atende bem às expectativas, com poucos ajustes necessários.</p>
+            <p><strong>3 - Satisfatório (70% a 79%):</strong> cumpre os requisitos básicos, mas pode ser aprimorado.</p>
+            <p><strong>4 - Regular (60% a 69%):</strong> atende parcialmente, mas com falhas ou limitações.</p>
+            <p><strong>5 - Insatisfatório (abaixo de 60%):</strong> muito abaixo do esperado, não atende aos requisitos.</p>
+          </div>
+        </section>
+
+        <!-- Seção 4: Avaliação -->
+        <section class="secao">
+          <h3>4. Avaliação do servidor</h3>
+
+          <!-- Container onde os comportamentos serão inseridos via JavaScript -->
+          <div id="comportamentos-container"></div>
+        </section>
+
+        <section class="secao secao-resultado">
+          <div class="resultado-final">
+            <h2>Resultado final</h2>
+            <div class="resultado-conteudo">
+              <div class="resultado-linha">
+                <span>Total geral (máx: 100 pts)</span>
+                <span class="resultado-valor" id="total-geral">0.0</span>
+              </div>
+              <div class="resultado-linha">
+                <span>Percentual</span>
+                <span class="resultado-valor" id="percentual">0.0%</span>
+              </div>
+              <div class="resultado-linha">
+                <span>Avaliação</span>
+                <span class="resultado-valor" id="indice">-</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Assinaturas -->
+        <section class="assinaturas">
+          <div class="assinatura assinatura--local">
+            <p class="assinatura-titulo">Local e data</p>
+            <div class="assinatura-campos">
+              <div class="campo">
+                <label for="local">Local</label>
+                <input type="text" id="local" name="local" class="input-local" />
+              </div>
+              <div class="campo">
+                <label for="data_assinatura">Data</label>
+                <input type="date" id="data_assinatura" name="data_assinatura" class="input-data-assinatura" />
+              </div>
+            </div>
+          </div>
+
+          <div class="assinatura">
+            <div class="assinatura-linha" role="presentation"></div>
+            <p>Assinatura do servidor</p>
+          </div>
+
+          <div class="assinatura">
+            <div class="assinatura-linha" role="presentation"></div>
+            <p>Ciência da chefia atual</p>
+          </div>
+        </section>
+
+        <!-- Botões de Ação -->
+        <div class="botoes-acao">
+          <button type="button" class="btn btn-primary" onclick="baixarPDF()" aria-label="Baixar PDF">Baixar PDF</button>
+          <button type="button" class="btn btn-secondary" onclick="novaAvaliacao()" aria-label="Nova Avaliação">Nova avaliação</button>
+        </div>
+      </main>
     </div>
 
     <!-- JavaScript Modular - Vite vai processar automaticamente -->

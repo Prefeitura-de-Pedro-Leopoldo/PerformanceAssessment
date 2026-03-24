@@ -65,6 +65,7 @@ export function substituirInputsPorTexto(clone) {
  */
 export function prepararCloneParaPDF(elemento) {
   const clone = elemento.cloneNode(true)
+  clone.classList.add("pdf-export")
 
   // Remove botões de ação
   const botoes = clone.querySelector(".botoes-acao")
@@ -133,6 +134,7 @@ export function obterConfigPDF() {
     },
     pagebreak: {
       mode: ["avoid-all", "css", "legacy"],
+      before: [".secao-resultado"],
       avoid: [".comportamento", ".secao", ".resultado-final", ".assinaturas"]
     }
   }

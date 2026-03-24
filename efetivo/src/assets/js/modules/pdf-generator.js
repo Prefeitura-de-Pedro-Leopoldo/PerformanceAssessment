@@ -96,6 +96,7 @@ export function substituirTextareasPorTexto(clone) {
  */
 export function prepararCloneParaPDF(elemento) {
   const clone = elemento.cloneNode(true)
+  clone.classList.add("pdf-export")
 
   // Remove botões de ação
   const botoes = clone.querySelector(".botoes-acao")
